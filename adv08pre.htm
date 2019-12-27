@@ -72,10 +72,21 @@ function loadData() {
 
 <script>
 function accessegress(){
-   document.getElementById("overlay1").style.display = "show";
+   document.getElementById("overlay1").style.display = "block";
 }
 </script>
 
+<script>
+function accessegressexit(){
+   document.getElementById("overlay1").style.display = "none";
+}
+</script>
+
+<script>
+function showinsp(){
+   document.getElementById("gsheetinsp").style.display = "block";
+}
+</script>
 <style>
 <!-- body {font-family: Arial, Helvetica, sans-serif;} --> body {font-family: "Lato", sans-serif;} .sidenav {
   height: 100%;
@@ -91,7 +102,7 @@ function accessegress(){
 }
 
 .main {font-size: 1.2em;
-  /* Same as the width of the sidenav */ }
+}
 
 table {
   font-family: arial, sans-serif;
@@ -250,6 +261,52 @@ height: 30px;
  position:absolute;
  top:0px;
  background-color:#F2EE79;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
 }
 </style>
    <script>
@@ -1085,69 +1142,100 @@ if ((document.getElementById("uname").value == "jeffchapman") &&
   
   </body>
   <br><br><br><br>
+  <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">Work/Inspection Form</a>
+  <a href="#">Job - Office History</a>
+  <a href="#">Job - Field History</a>
+  <a href="#">Client - Job History</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">☰</button>  
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
   <center>
-   <form id ="gsheetinsp">
+ 
+ <div id="overlay1" style="display:none" class="modal"><center><img src="https://drive.google.com/uc?id=1Wq8ZyGez9quqC8tgmHf9nGks5_OZqh6y"  top=35px right=125px height=60 width=75/></center>
+  <div class="container">
+      <label style="font-size:23px;"><b>Access Site & Sign in @ Maint office. 
+Walk/Inspect the area your choose to work on the crane in, ALWAYS erect cones and safety tape, this is an active heavy industry site with many workers in the area, the risk to others is VERY HIGH.<br><br> 
+
+Complete your "Daily Hazard Assessment", Our Know Hazards Include but are not limited too:
+PPE: Eye Protection, Fall Protection, Hearing Protection, High Vizibility Wear & Safety Foot Wear are MINIMUM as per Client Requirements.<br><br>
+
+MEWP: Provided by Client. While Client APPROVES driving of the Sissor lift without Fall Protection, this is not acceptable as per ADVANCE CRANE POLICY - 100% Fall Protection is required as soon as you enter any Mobile Elevated Work Platform.<br><br>
+
+Ladders: Not typically used.<br><br>
+
+Powered Mobile Equipment: HIGH RISK! Lots of Battery Powered Fork Lifts and Pallet Jacks in constant motion plant wide. RECOMMEND: Use of a spotter when driving a MEWP from the Garage to the work area.<br><br>
+
+Power Tools: Typical use includes but is not limited to, Battery Operated Grease Gun, 3/8" Impact or Battery Operated Grinder. Ensure PPE is used & any guards are in place.<br><br>
+
+Scaffolds: Not Used On this SIte<br><br>
+
+Crane Log Book: Client has not implemented a Crane Book System at this time.<br><br>
+
+Anchors & Tie Offs/Work at Heights above 3 Meters: No Crane on this Site has a catwalk or other means of access, use of a MEWP is required. All three of the Client Provided MEWP's have provide/approved Tie Off Points.<br><br>
+
+Distractions/Moving Equipment/Noise&Communications/Vehicle&Pedestrian Hazards: This is an active Heavy Industrial Site with multiple employees in the plant/work area. Seek out eye contact and confirm all communications before entering/crossing someones work area. Ensure your work area is safe for others by erecting Safety Cones and Danger Marking Tape to create an exclusion zone large enough to protect people and property from harm.<br><br>
+
+Electrical: Primary power is 575 Volt. Lock Out/Tag Out when not troubleshooting.<br><br>
+
+Flammable/Explosive Hazards: Use of any Solvent constitutes a Hazard. Use Caution when using even "Non-Flammable" Brake or Contact Cleaner, allow ample time for the solvent to flash off. Refer to provided WHMS Sheets.<br><br>
+
+Ground Conditions: The floor has few drains or grates. If you do encounter and must cross any such object you MUST lower your MEWP to the lowest position before proceeding.<br><br>
+
+Lifting/Twisting Strains: Some Lifting twisting required, pre-plan your movements and get mechanical assistance if required.<br><br>
+
+Over Head Power Lines: Live 575Vac Buss Bars Overhead. Lock Out/Tag Out if your not troubleshooting and within 5 feet of.<br><br>
+
+Slips/Trips/Falls: This Site has many floor fixtures in/around the station jigs. Use caution when walking/driving thru the plant/work areas.</b><br><br>
+<button class="submitbutton" onclick="accessegressexit();showinsp();">Accept</button>
+</label>
+      
+      </div></div>
+ 
+<form id="jobnoform">
+  <font size="5">Job Number: <input class="buttontext" id="jobnumber1" name="jobnumber1" type="text"/></font>
+  <button class="button" id="myBtn1" type="button" onclick="accessegress();">Enter Job Number</button>
+  <script>
+var $formx = $('form#jobnoform'),
+    urlx = 'https://script.google.com/macros/s/AKfycbz1qS-OkwqICk1WpH0I9BSEuw2kLxxIqVrhv_SZ8jchYcPWz-rw/exec',
+
+$submitx = $('#myBtn1').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: urlx,
+    method: "GET",
+    dataType: "json",
+    data: $formx.serializeObject()
+  }).done(
+    // do something
+  );
+   $('#jobnoform')[0].reset();
+})
+</script>
+  </form>
+  
+   <form id ="gsheetinsp" style="display:none">
    
    <div id="info1">
   <td><br><br>
- <font size="5">Job Number: <input class="buttontext" id="jobnumber" name="jobnumber" type="text"/></font><div id=frame>
- <iframe src="https://docs.google.com/spreadsheets/d/18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc/edit?rm=minimal#gid=310589616&single=true&range=A2:C2&headers=false&widget=false&chrome=false" width="400" height="200" scrolling="no" frameborder="0"></iframe>
- <div id="bottomframe">
-            <p></p>
-    </div>
-    <div id="leftframe">
-            <p></p>
-    </div>
-    <div id="rightframe">
-            <p></p>
-    </div>
-     <div id="topframe">
-            <p></p>
-    </div>
-    </div></td><br><br><button class="button" id="myBtn" type="button" onclick="loadData();loadData1();loadData2();loadData3();loadData4();loadData5();">Get Info</button>&nbsp;&nbsp;
+   <font size="5">Job Number: <input class="buttontext" id="jobnumber" name="jobnumber" type="text"/></font>
+</td><br><br><button class="button" id="myBtn" type="button" onclick="loadData();loadData1();loadData2();loadData3();loadData4();loadData5();accessegress();">Get Info</button>&nbsp;&nbsp;
     <td><font size="5">Customer: <input class="buttontext" id="customername" name="customername" type="text" style="font-size:23px;" width="50"/></font></td><br><br>
     <td><font size="5">Equipment Asset #: <input style="font-size:23px;" class="buttontext" id="equipmentassetnumber" name="equipmentassetnumber" type="text"/></font></td><br><br>
  <td><font size="5">Equipment Field Name: <input style="font-size:23px;" class="buttontext" id="equipmentfieldname" name="equipmentfieldname" type="text"/></font></td><br><br>
   <td><font size="5">Job Type: <input style="font-size:23px;" class="buttontext" id="jobtype" name="jobtype" type="text"/></font></td><br><br>
   </div><br><br>
   
-  <div id="overlay1" style="display:none" class="modal"><center><img src="https://drive.google.com/uc?id=1Wq8ZyGez9quqC8tgmHf9nGks5_OZqh6y"  top=35px right=125px height=60 width=75/></center>
-  <div class="container">
-      <label style="font-size:23px;"><b>Access Site & Sign in @ Maint office. 
-Walk/Inspect the area your choose to work on the crane in, ALWAYS erect cones and safety tape, this is an active heavy industry site with many workers in the area, the risk to others is VERY HIGH. 
-
-Complete your "Daily Hazard Assessment", Our Know Hazards Include but are not limited too:
-PPE: Eye Protection, Fall Protection, Hearing Protection, High Vizibility Wear & Safety Foot Wear are MINIMUM as per Client Requirements.
-
-MEWP: Provided by Client. While Client APPROVES driving of the Sissor lift without Fall Protection, this is not acceptable as per ADVANCE CRANE POLICY - 100% Fall Protection is required as soon as you enter any Mobile Elevated Work Platform.
-
-Ladders: Not typically used.
-
-Powered Mobile Equipment: HIGH RISK! Lots of Battery Powered Fork Lifts and Pallet Jacks in constant motion plant wide. RECOMMEND: Use of a spotter when driving a MEWP from the Garage to the work area.
-
-Power Tools: Typical use includes but is not limited to, Battery Operated Grease Gun, 3/8" Impact or Battery Operated Grinder. Ensure PPE is used & any guards are in place.
-
-Scaffolds: Not Used On this SIte
-
-Crane Log Book: Client has not implemented a Crane Book System at this time.
-
-Anchors & Tie Offs/Work at Heights above 3 Meters: No Crane on this Site has a catwalk or other means of access, use of a MEWP is required. All three of the Client Provided MEWP's have provide/approved Tie Off Points.
-
-Distractions/Moving Equipment/Noise&Communications/Vehicle&Pedestrian Hazards: This is an active Heavy Industrial Site with multiple employees in the plant/work area. Seek out eye contact and confirm all communications before entering/crossing someones work area. Ensure your work area is safe for others by erecting Safety Cones and Danger Marking Tape to create an exclusion zone large enough to protect people and property from harm.
-
-Electrical: Primary power is 575 Volt. Lock Out/Tag Out when not troubleshooting.
-
-Flammable/Explosive Hazards: Use of any Solvent constitutes a Hazard. Use Caution when using even "Non-Flammable" Brake or Contact Cleaner, allow ample time for the solvent to flash off. Refer to provided WHMS Sheets.
-
-Ground Conditions: The floor has few drains or grates. If you do encounter and must cross any such object you MUST lower your MEWP to the lowest position before proceeding.
-
-Lifting/Twisting Strains: Some Lifting twisting required, pre-plan your movements and get mechanical assistance if required.
-
-Over Head Power Lines: Live 575Vac Buss Bars Overhead. Lock Out/Tag Out if your not troubleshooting and within 5 feet of.
-
-Slips/Trips/Falls: This Site has many floor fixtures in/around the station jigs. Use caution when walking/driving thru the plant/work areas.</b></label>
-      <button class="submitbutton" onclick="accessegress();">Accept</button>
-      </div></div>
     
   <div id="info3">
   <td><font size="5">Crane Manufacturer: <input style="font-size:23px;" class="buttontext" id="cranemanufacturer" name="cranemanufacturer" type="text"/></font></td><br><br>
