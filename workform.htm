@@ -1319,24 +1319,24 @@ $submitx = $('#myBtn1').on('click', function(e) {
 <center><h2><font size="5">Safety Set-up</font></h2>
 <h3><font size="4">Please check off your completed safety forms as required</font></h3>
 
-<label><font size="4"><input id="list" class=largerCheckbox type="checkbox">Daily Hazard Assessment</font></label><br>
+<label><font size="4"><input id="dailyhazard" class=largerCheckbox type="checkbox">Daily Hazard Assessment</font></label><br>
 
-<label><font size="4"><input id="list" class=largerCheckbox type="checkbox">Fall Protection Equipment Pre-Use Checklist</font></label><br>
+<label><font size="4"><input id="fallprotection" class=largerCheckbox type="checkbox">Fall Protection Equipment Pre-Use Checklist</font></label><br>
 
-<label><font size="4"><input id="list" class=largerCheckbox type="checkbox">Ladder Pre-Use Checklist</font></label><br>
+<label><font size="4"><input id="ladderpreuse" class=largerCheckbox type="checkbox">Ladder Pre-Use Checklist</font></label><br>
 
-<label><font size="4"><input id="list" class=largerCheckbox type="checkbox">Aerial or Scissor Lift Pre-Use Checklist</font></label><br>
+<label><font size="4"><input id="aerialscissorlift" class=largerCheckbox type="checkbox">Aerial or Scissor Lift Pre-Use Checklist</font></label><br>
 
-<label><font size="4"><input id="list" class=largerCheckbox type="checkbox">Weekly Company Vehicle Inspection Checklist</font></label><br>
+<label><font size="4"><input id="companyvehicle" class=largerCheckbox type="checkbox">Weekly Company Vehicle Inspection Checklist</font></label><br>
 
-<label><font size="4"><input id="list" class=largerCheckbox type="checkbox">Monthly Fire Extinguisher Checklist</font></label><br>
+<label><font size="4"><input id="fireextinguisher" class=largerCheckbox type="checkbox">Monthly Fire Extinguisher Checklist</font></label><br>
 
 </center><br><br><br>
 
 <label><font size="5">Start Time: <input style="font-size:23px;" type="time" name="starttime" id="starttime"></font></label><br><br><br>
   
   <label><font size="5">Description: <input style="font-size:23px;" type="text" name="description-entry" id="description-entry"></font></label><br><br><br>
-     <label><font size="5"><input id="list" class=largerCheckbox type="checkbox" onclick="inspectionpoints()">List of Inspection Points</font></label><br>
+     <label><font size="5"><input id="list" class=largerCheckbox type="checkbox" onclick="inspectionpoints();">List of Inspection Points</font></label><br>
   <table id="inspdiv" style="display:none">
   <tr>
     <td>Component</td>
@@ -2703,14 +2703,14 @@ $submit = $('#submit-form').on('click', function(e) {
 function inspectionpoints(){
 var list = document.getElementById("list");
 var gsheetinsp = document.getElementById("inspdiv");
-var stoptimediv = document.getElementById("stoptimediv");
+//var stoptimediv = document.getElementById("stoptimediv");
 if (list.checked == true)
 {
 gsheetinsp.style.display = "block";
-stoptimediv.style.display = "block";
+//stoptimediv.style.display = "block";
 } else {
 gsheetinsp.style.display = "none";
-stoptimediv.style.display = "none";
+//stoptimediv.style.display = "none";
   }
 }
 </script>
