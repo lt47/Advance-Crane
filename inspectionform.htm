@@ -1,0 +1,1593 @@
+<html>
+<head>     
+<meta charset="utf-8"  content="width=device-width, initial-scale=1"> 
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<title></title>
+
+
+<script>
+function accessegress(){
+   document.getElementById("overlay1").style.display = "block";
+}
+</script>
+
+<script>
+function accessegressexit(){
+   document.getElementById("overlay1").style.display = "none";
+}
+</script>
+
+<script>
+function showconfirmjobnumber(){
+   document.getElementById("confirmjobnumber").style.display = "block";
+}
+</script>
+
+<script>
+function hidejobnum(){
+   document.getElementById("jobnoform").style.display = "none";
+}
+</script>
+
+<script>
+function showjobnum(){
+   document.getElementById("jobnoform").style.display = "block";
+}
+</script>
+
+<script>
+function displayjobnum(){
+var jobnuminput = document.getElementById("jobnumber1").value;
+  document.getElementById("jobnumtext").innerHTML =  jobnuminput;
+}
+</script>
+
+<style>
+<!-- body {font-family: Arial, Helvetica, sans-serif;} --> body {font-family: "Lato", sans-serif;} .sidenav {
+  height: 100%;
+  width: 125px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #4a4a4a;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-size: 1.3em;
+}
+
+.main {font-size: 1.2em;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  font-size: 35px;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  font-size: 40px;
+}
+
+.modal { 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+  font-size: 1.1em;
+}
+
+input[type="text"]
+{
+    font-size:35px;
+}
+
+input[type="button"]
+{
+    font-size:40px;
+}
+
+select
+{
+    font-size:13px;
+}
+table tr#divider  {background-color:#000000;}
+table tr#ROW1  {background-color:#dddddd;}
+table tr#ROW2  {background-color:#dddddd;}
+table tr#ROW3  {background-color:#dddddd;}
+table tr#ROW4  {background-color:#dddddd;}
+table tr#ROW5  {background-color:#dddddd;}
+table tr#ROW6  {background-color:#dddddd;}
+table tr#ROW7  {background-color:#F7A33B;}
+table tr#des  {font-size:0.7em;}
+div#info1  {background-color:#F2EE79;}
+div#info2  {background-color:#F2EE79;}
+div#info3  {background-color:#F2EE79;}
+div#info4  {background-color:#F2EE79;}
+
+#overlay {
+  position: fixed;
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:#000000; 
+  z-index: 2; 
+  cursor: pointer; 
+  font-size: 1.7em;
+  color:#dddddd;
+}
+#overlay1 {
+  position: fixed;
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:#000000; 
+  z-index: 2; 
+  cursor: pointer; 
+  font-size: 1.7em;
+  color:#dddddd;
+}
+input[type=password] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size:15px;
+}
+.username{width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;}
+.greenfield {background-color: #00A146;}
+.yellowfield {background-color: #EEF52C;}
+.redfield {background-color: #F71302;}
+.grayfield {background-color:#dddddd;}
+.orangefield {background-color:#fc7f03;}
+.bluefield {background-color:#0202fa;}
+.purplefield {background-color:#e605ff;}
+.torqfield {background-color:#05ffd1;}
+.limegreenfield {background-color:#82ff05;}
+.pinkfield {background-color:#ff8cea;}
+.peachfield {background-color:#f0c3a3;}
+.button {font-size: 40px;}
+.submitbutton {font-size: 40px;
+padding: 15px 32px;
+background-color: #00A146;
+}
+.buttontext {font-size:0.4em;}
+input.largerCheckbox
+{
+width: 30px;
+height: 30px;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+#frame {
+ width: 420px;
+ height: 150px; 
+ overflow:hidden;
+ position:relative;
+}
+#bottomframe {
+ width: 400px;
+ height: 100px;
+ position:absolute;
+ top:53px;
+ left:11px;
+ background-color:#F2EE79;
+}
+#leftframe {
+ width: 45px;
+ height: 150px;
+ position:absolute;
+ top:3px;
+ left:10px;
+ background-color:#F2EE79;
+}
+#rightframe {
+ width: 14px;
+ height: 150px;
+ position:absolute;
+ top:3px;
+ right:10px;
+ background-color:#F2EE79;
+}
+#topframe {
+ width: 420px;
+ height: 26px;
+ position:absolute;
+ top:0px;
+ background-color:#F2EE79;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>
+
+
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-56318310-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <base target="_top"/>
+</head>
+
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+$.fn.serializeObject = function()
+{
+var o = {};
+var a = this.serializeArray();
+$.each(a, function() {
+if (o[this.name]) {
+if (!o[this.name].push) {
+o[this.name] = [o[this.name]];
+}
+o[this.name].push(this.value || '');
+} else {
+o[this.name] = this.value || '';
+}
+});
+return o;
+};
+</script>
+<script>
+function authentication(){
+if ((document.getElementById("uname").value == "jeffchapman") && 
+   (document.getElementById("psw").value == "manitoba"))
+   document.getElementById("overlay").style.display = "none";
+   else {
+  alert("Please enter valid credentials.");
+}
+
+}
+</script>
+
+  </body>
+
+ <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="https://lt47.github.io/Advance-Crane/inspectionform.htm">Work/Inspection Form</a>
+  <a href="https://lt47.github.io/Advance-Crane/jobofficehistory.htm">Job - Office History</a>
+  <a href="https://lt47.github.io/Advance-Crane/jobfieldhistory.htm">Job - Field History</a>
+  <a href="https://lt47.github.io/Advance-Crane/clientjobhistory.htm">Client - Job History</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">☰</button>  
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+
+
+<form id ="gsheetinsp" method="POST">
+
+<div>
+<center><img src="https://drive.google.com/uc?id=1Wq8ZyGez9quqC8tgmHf9nGks5_OZqh6y"  top=35px right=125px height=60 width=75/></center><br>
+</div>
+
+<center>
+<div id="info1">
+  <td><br><br>
+   <button class="button" style="font-size:40px;"style="font-size:35px;" id="myBtn2" type="button" onclick="showjobnum();">Back</button><br><br>
+
+<font size="8">Job Number:<br> <input class="buttontext" id="jobnumber" name="jobnumber" oninput="displayjobnum" type="text" style="font-size:35px" disabled/></font>
+</td><br><br>&nbsp;&nbsp;
+    <td><font size="8">Customer:<br> <input class="buttontext" id="customername" name="customername" type="text" style="font-size:35px;" width="50"/></font></td><br><br>
+    <td><font size="8">Equipment Asset #:<br> <input style="font-size:35px;" class="buttontext" id="equipmentassetnumber" name="equipmentassetnumber" type="text"/></font></td><br><br>
+ <td><font size="8">Equipment Field Name:<br> <input style="font-size:35px;" class="buttontext" id="equipmentfieldname" name="equipmentfieldname" type="text"/></font></td><br><br>
+  <td><font size="8">Job Type:<br> <input style="font-size:35px;" class="buttontext" id="jobtype" name="jobtype" type="text"/></font></td><br><br>
+  <td><font size="8">Scope of Work:<br> <textarea rows="20" cols="50" style="font-size:35px;"  id="scopeofwork" name="scopeofwork" type="text"/></textarea></font></td><br><br>
+  </div><br><br>
+  
+  <h2 style="font-size:40px;">
+  Crane Identification
+  </h2>  
+  <div id="info3">
+  <td><font size="8">Crane Manufacturer:<br> <input style="font-size:35px;" class="buttontext" id="cranemanufacturer" name="cranemanufacturer" type="text"/></font></td><br><br>
+  <td><font size="8">Crane Model:<br> <input style="font-size:35px;" class="buttontext" id="cranemodel" name="cranemodel" type="text"/></font></td><br><br>
+  <td><font size="8">Crane Serial Number:<br> <input style="font-size:35px;" class="buttontext" id="craneserialnumber" name="craneserialnumber" type="text"/></font></td><br><br>
+  <td><font size="8">Hoist Manufacturer:<br> <input style="font-size:35px;" class="buttontext" id="hoistmanufacturer" name="hoistmanufacturer" type="text"/></font></td><br><br>
+  <td><font size="8">Hoist Model:<br> <input style="font-size:35px;" class="buttontext" id="hoistmodel" name="hoistmodel" type="text"/></font></td><br><br>
+  <td><font size="8">Hoist Serial Number:<br> <input style="font-size:35px;" class="buttontext" id="hoistserialnumber" name="hoistserialnumber" type="text"/></font></td><br><br>
+  </div>
+  </center>
+<br><br><br><br><br>
+
+<center><h2><font size="8">Safety Set-up</font></h2>
+<h3><font size="7">Please check off your completed safety forms as required</font></h3>
+
+<label><font size="7"><input id="dailyhazard" class=largerCheckbox type="checkbox">Daily Hazard Assessment</font></label><br>
+
+<label><font size="7"><input id="fallprotection" class=largerCheckbox type="checkbox">Fall Protection Equipment Pre-Use Checklist</font></label><br>
+
+<label><font size="7"><input id="ladderpreuse" class=largerCheckbox type="checkbox">Ladder Pre-Use Checklist</font></label><br>
+
+<label><font size="7"><input id="aerialscissorlift" class=largerCheckbox type="checkbox">Aerial or Scissor Lift Pre-Use Checklist</font></label><br>
+
+<label><font size="7"><input id="companyvehicle" class=largerCheckbox type="checkbox">Weekly Company Vehicle Inspection Checklist</font></label><br>
+
+<label><font size="7"><input id="fireextinguisher" class=largerCheckbox type="checkbox">Monthly Fire Extinguisher Checklist</font></label><br>
+
+</center><br><br><br><br><br>
+
+<center>
+<label><font size="8">Start Time: <input style="font-size:35px;" type="time" name="starttime" id="starttime"></font></label><br><br><br>
+  
+  <label><font size="8">Description of work completed: <textarea rows="20" cols="50" style="font-size:35px;" type="text" name="description-entry" id="description-entry"></textarea></font></label><br><br><br>
+     <label><font size="8"><input id="list" class=largerCheckbox type="checkbox" onclick="inspectionpoints();">Inspection Form</font></label><br></center>
+ 
+ <center>
+ 
+ 
+
+ <table id="inspdiv" style="display:none">
+  <tr>
+    <td>Component</td>
+  </tr>
+  <tr id="ROW1">
+    <td><b>Bridge</b></td>
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Wheels</b>&nbsp;<font size="8"><input class="button" id="img" type="file" accept="image/*" /></font><input id ="demo" name="wheels-imagelink" type="hidden"/></td>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "wheels-condition" name = "wheels-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+<tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="wheels-details" name="wheels-details">
+</textarea></font></td>
+</tr>
+
+  <tr id="divider">
+    <td></td>
+  </tr>     
+  <tr>
+  <td style="color: green;"><b>Bearings</b>&nbsp;<font size="8"><input class="button" id="img2" type="file" accept="image/*" /></font><input id ="demo2" name="bearings-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:45px;" class="grayfield" id = "bearings-condition" name= "bearings-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="bearings-details" name="bearings-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Brakes</b>&nbsp;<font size="8"><input class="button" id="img3" type="file" accept="image/*" /></font><input id ="demo3" name="brakes-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:45px;"  class="grayfield" id = "brakes-condition" name = "brakes-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="brakes-details" name="brakes-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Motors</b>&nbsp;<font size="8"><input class="button" id="img4" type="file" accept="image/*" /></font><input id ="demo4" name="motors-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:45px;"   class="grayfield" id = "motors-condition" name = "motors-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="motors-details" name="motors-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Panels</b>&nbsp;<font size="8"><input class="button" id="img5" type="file" accept="image/*" /></font><input id ="demo5" name="bridgepanels-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:45px;"  class="grayfield" id = "bridgepanels-condition" name = "bridgepanels-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="bridgepanels-details" name="bridgepanels-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Connections</b>&nbsp;<font size="8"><input class="button" id="img6" type="file" accept="image/*" /></font><input id ="demo6" name="bridgeconnections-imagelink" type="hidden"/></td>
+ 
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:35px;"  class="grayfield" id = "bridgeconnections-condition" name = "bridgeconnections-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="bridgeconnections-details" name="bridgeconnections-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Proper Operation</b>&nbsp;<font size="8"><input class="button" id="img7" type="file" accept="image/*" /></font><input id ="demo7" name="bridgeproperoperation-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:35px;"  class="grayfield" id = "bridgeproperoperation-condition" name = "bridgeproperoperation-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="bridgeproperoperation-details" name="bridgeproperoperation-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Power Collectors</b>&nbsp;<font size="8"><input class="button" id="img8" type="file" accept="image/*" /></font><input id ="demo8" name="powercollectors-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:35px;"  class="grayfield" id = "powercollectors-condition" name = "powercollectors-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="powercollectors-details" name="powercollectors-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Power Festooning</b>&nbsp;<font size="8"><input class="button" id="img9" type="file" accept="image/*" /></font><input id ="demo9" name="powerfestooning-imagelink" type="hidden"/></td>
+ 
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:45px;"  class="grayfield" id = "powerfestooning-condition" name = "powerfestooning-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="powerfestooning-details" name="powerfestooning-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Pendant Festooning</b>&nbsp;<font size="8"><input class="button" id="img10" type="file" accept="image/*" /></font><input id ="demo10" name="pendantfestooning-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:35px;"  class="grayfield" id = "pendantfestooning-condition" name = "pendantfestooning-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="pendantfestooning-details" name="pendantfestooning-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Local Disconnect</b>&nbsp;<font size="8"><input class="button" id="img11" type="file" accept="image/*" /></font><input id ="demo11" name="localdisconnect-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:45px;"  class="grayfield" id = "localdisconnect-condition" name = "localdisconnect-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="localdisconnect-details" name="localdisconnect-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Bridge/Rail Guage</b>&nbsp;<font size="8"><input class="button" id="img12" type="file" accept="image/*" /></font><input id ="demo12" name="bridgerailguage-imagelink" type="hidden"/></td>
+ 
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:45px;"  class="grayfield" id = "bridgerailguage-condition" name = "bridgerailguage-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+<tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="bridgerailguage-details" name="bridgerailguage-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Directional Markers</b>&nbsp;<font size="8"><input class="button" id="img13" type="file" accept="image/*" /></font><input id ="demo13" name="directionalmarkers-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:45px;"  class="grayfield" id = "directionalmarkers-condition" name = "directionalmarkers-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="directionalmarkers-details" name="directionalmarkers-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Girder or Beam Connections</b>&nbsp;<font size="8"><input class="button" id="img14" type="file" accept="image/*" /></font><input id ="demo14" name="bridgegirderbeamconnections-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition
+    <select style="height:45px;"  class="grayfield" id = "bridgegirderbeamconnections-condition" name = "bridgegirderbeamconnections-condition">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="bridgegirderbeamconnections-details" name="bridgegirderbeamconnections-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr id="ROW1">
+    <td><b>Hoist & Trolley</b></td>
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Trolley Wheels</b>&nbsp;<font size="8"><input class="button" id="img15" type="file" accept="image/*" /></font><input id ="demo15" name="trolleywheels-imagelink" type="hidden"/></td>
+ 
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "trolleywheels-condition" name = "trolleywheels-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="trolleywheels-details" name="trolleywheels-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>    
+  <tr>
+  <td style="color: green;"><b>Trolley Bearings</b>&nbsp;<font size="8"><input class="button" id="img16" type="file" accept="image/*" /></font><input id ="demo16" name="trolleybearings-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "trolleybearings-condition" name = "trolleybearings-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="trolleybearings-details" name="trolleybearings-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Trolley Brakes</b>&nbsp;<font size="8"><input class="button" id="img17" type="file" accept="image/*" /></font><input id ="demo17" name="trolleybrakes-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "trolleybrakes-condition" name = "trolleybrakes-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="trolleybrakes-details" name="trolleybrakes-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Trolley Motors</b>&nbsp;<font size="8"><input class="button" id="img18" type="file" accept="image/*" /></font><input id ="demo18" name="trolleymotors-imagelink" type="hidden"/></td>
+ 
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "trolleymotors-condition" name = "trolleymotors-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="trolleymotors-details" name="trolleymotors-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Hoist Drum</b>&nbsp;<font size="8"><input class="button" id="img19" type="file" accept="image/*" /></font><input id ="demo19" name="hoistdrum-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="font-size:45px;"  class="grayfield" id = "hoistdrum-condition" name = "hoistdrum-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoistdrum-details" name="hoistdrum-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Hoist Bearings</b>&nbsp;<font size="8"><input class="button" id="img20" type="file" accept="image/*" /></font><input id ="demo20" name="hoistbearings-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "hoistbearings-condition" name = "hoistbearings-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoistbearings-details" name="hoistbearings-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Hoist Brake</b>&nbsp;<font size="8"><input class="button" id="img21" type="file" accept="image/*" /></font><input id ="demo21" name="hoistbrake-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "hoistbrake-condition" name = "hoistbrake-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoistbrake-details" name="hoistbrake-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Hoist Motor</b>&nbsp;<font size="8"><input class="button" id="img22" type="file" accept="image/*" /></font><input id ="demo22" name="hoistmotor-imagelink" type="hidden"/></td>
+ 
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:35px;"  class="grayfield" id = "hoistmotor-condition" name = "hoistmotor-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoistmotor-details" name="hoistmotor-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Hoist Chain/Rope</b>&nbsp;<font size="8"><input class="button" id="img23" type="file" accept="image/*" /></font><input id ="demo23" name="hoistchainrope-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "hoistchainrope-condition" name = "hoistchainrope-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoistchainrope-details" name="hoistchainrope-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Hoist Hook</b>&nbsp;<font size="8"><input class="button" id="img24" type="file" accept="image/*" /></font><input id ="demo24" name="hoisthook-imagelink" type="hidden"/></td>
+ 
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "hoisthook-condition" name = "hoisthook-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoisthook-details" name="hoisthook-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Hoist Block</b>&nbsp;<font size="8"><input class="button" id="img25" type="file" accept="image/*" /></font><input id ="demo25" name="hoistblock-imagelink" type="hidden"/></td>
+ 
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "hoistblock-condition" name = "hoistblock-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoistblock-details" name="hoistblock-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Panels</b>&nbsp;<font size="8"><input class="button" id="img26" type="file" accept="image/*" /></font><input id ="demo26" name="hoisttrolleypanels-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "hoisttrolleypanels-condition" name = "hoisttrolleypanels-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoisttrolleypanels-details" name="hoisttrolleypanels-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Connections</b>&nbsp;<font size="8"><input class="button" id="img27" type="file" accept="image/*" /></font><input id ="demo27" name="hoisttrolleyconnections-imagelink" type="hidden"/></td>
+ 
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "hoisttrolleyconnections-condition" name = "hoisttrolleyconnections-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoisttrolleyconnections-details" name="hoisttrolleyconnections-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Proper Operation</b>&nbsp;<font size="8"><input class="button" id="img28" type="file" accept="image/*" /></font><input id ="demo28" name="hoisttrolleyproperoperation-imagelink" type="hidden"/></td>
+ 
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "hoisttrolleyproperoperation-condition" name = "hoisttrolleyproperoperation-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoisttrolleyproperoperation-details" name="hoisttrolleyproperoperation-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Limit Switches</b>&nbsp;<font size="8"><input class="button" id="img29" type="file" accept="image/*" /></font><input id ="demo29" name="limitswitches-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:35px;"  class="grayfield" id = "limitswitches-condition" name = "limitswitches-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="limitswitches-details" name="limitswitches-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Festooning</b>&nbsp;<font size="8"><input class="button" id="img30" type="file" accept="image/*" /></font><input id ="demo30" name="festooning-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "festooning-condition" name = "festooning-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="festooning-details" name="festooning-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Trolley Guage</b>&nbsp;<font size="8"><input class="button" id="img31" type="file" accept="image/*" /></font><input id ="demo31" name="trolleyguage-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "trolleyguage-condition" name = "trolleyguage-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="trolleyguage-details" name="trolleyguage-details">
+</textarea></font></td>
+</tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+  <td style="color: green;"><b>Girder or Beam Connections</b>&nbsp;<font size="8"><input class="button" id="img32" type="file" accept="image/*" /></font><input id ="demo32" name="hoisttrolleygirderbeamconnections-imagelink" type="hidden"/></td>
+  
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:35px;" class="grayfield" id = "hoisttrolleygirderbeamconnections-condition" name = "hoisttrolleygirderbeamconnections-condition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+    </tr>
+    
+  </tr>
+  <tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements
+<textarea rows="5" cols="50" style="font-size:35px;" id="hoisttrolleygirderbeamconnections-details" name="hoisttrolleygirderbeamconnections-details">
+</textarea></font></td>
+</tr>
+      
+  <tr id="divider">
+    <td></td>
+  </tr>
+
+  <tr id="ROW7">
+    <td>Inspector Name:<input style="font-size:35px;" id="inspectorname" name="inspectorname"type="text"/></td>
+    </tr>
+<tr id="divider">
+    <td></td>
+  </tr>
+<tr id="ROW7">
+    <td>Initials:<input style="font-size:35px;"  id="inspectorinitials" name="inspectorinitials" type="text"/></td>
+    </tr>
+<tr id="divider">
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+    <tr id="ROW7">
+    <td>Client Name:<input style="font-size:35px;" id="clientname" name="clientname" type="text"/></td>
+  </tr>
+<tr id="divider">
+    <td></td>
+  </tr>
+<tr id="ROW7">
+    <td>Initials:<input style="font-size:35px;" id="clientinitials" name="clientinitials" type="text"/></td>
+  </tr>
+<br><br><br>
+
+ <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+    <td>Safety Tear Down</td>
+  </tr>
+  <tr>
+    <td>Please check to indicate you have done the following before leaving the job site</td>
+  </tr>
+  <tr>
+    <td><input id="toolsrigging" class=largerCheckbox type="checkbox">All tools and rigging has been removed and accounted for.</td>
+  </tr>
+  <tr>
+    <td><input id="safetybarricades" class=largerCheckbox type="checkbox">All safety barricades, cones and marking tape has been removed and is accounted for.</td>
+  </tr>
+  <tr>
+    <td><input id="lockremoval" class=largerCheckbox type="checkbox">All locks have been removed.</td>
+  </tr>
+  <tr>
+    <td><input id="partsandmaterial" class=largerCheckbox type="checkbox">All material and parts have been removed and any required clean-up of the crane or lift is complete.</td>
+  </tr>
+  <tr>
+    <td><input id="clientcheck" class=largerCheckbox type="checkbox">The client has been informed that the job is complete and is satisfied.</td>
+  </tr>
+  <tr>
+  <td>Stop Time: <input style="font-size:35px;" type="time" name="stoptime" id="stoptime"></td>
+  </tr>
+  
+  </table><br><br><br><br>
+     
+ 
+ 
+  <div style="display:none" id="stoptimediv">
+  <label><font size="5">Stop Time: <input style="font-size:23px;" type="time" name="stoptime" id="stoptime"></font></label>
+  </div><br><br>
+  
+ <b><button class="submitbutton" id="submit-form" type="submit">Submit</button> </b></center> 
+  <script>
+var fileInput = document.getElementById('img');
+//var preview = document.getElementById('preview');
+
+fileInput.addEventListener('change', function(e) {
+  
+    var imgurl = URL.createObjectURL(e.target.files[0]);
+    document.getElementById("demo").value = imgurl;
+}, false);
+</script>
+<script>
+var fileInput2 = document.getElementById('img2');
+
+fileInput2.addEventListener('change', function(f) {
+  
+    var imgurl2 = URL.createObjectURL(f.target.files[0]);
+    document.getElementById("demo2").value = imgurl2;
+}, false);
+</script>
+<script>
+var fileInput3 = document.getElementById('img3');
+
+fileInput3.addEventListener('change', function(g) {
+  
+    var imgurl3 = URL.createObjectURL(g.target.files[0]);
+    document.getElementById("demo3").value = imgurl3;
+}, false);
+</script>
+<script>
+var fileInput4 = document.getElementById('img4');
+
+fileInput4.addEventListener('change', function(h) {
+  
+    var imgurl4 = URL.createObjectURL(h.target.files[0]);
+    document.getElementById("demo4").value = imgurl4;
+}, false);
+</script>
+<script>
+var fileInput5 = document.getElementById('img5');
+
+fileInput5.addEventListener('change', function(i) {
+  
+    var imgurl5 = URL.createObjectURL(i.target.files[0]);
+    document.getElementById("demo5").value = imgurl5;
+}, false);
+</script>
+<script>
+var fileInput6 = document.getElementById('img6');
+
+fileInput6.addEventListener('change', function(j) {
+  
+    var imgurl6 = URL.createObjectURL(j.target.files[0]);
+    document.getElementById("demo6").value = imgurl6;
+}, false);
+</script>
+<script>
+var fileInput7 = document.getElementById('img7');
+
+fileInput7.addEventListener('change', function(k) {
+  
+    var imgurl7 = URL.createObjectURL(k.target.files[0]);
+    document.getElementById("demo7").value = imgurl7;
+}, false);
+</script>
+<script>
+var fileInput8 = document.getElementById('img8');
+
+fileInput8.addEventListener('change', function(l) {
+  
+    var imgurl8 = URL.createObjectURL(l.target.files[0]);
+    document.getElementById("demo8").value = imgurl8;
+}, false);
+</script>
+<script>
+var fileInput9 = document.getElementById('img9');
+
+fileInput9.addEventListener('change', function(m) {
+  
+    var imgurl9 = URL.createObjectURL(m.target.files[0]);
+    document.getElementById("demo9").value = imgurl9;
+}, false);
+</script>
+<script>
+var fileInput10 = document.getElementById('img10');
+
+fileInput10.addEventListener('change', function(n) {
+  
+    var imgurl10 = URL.createObjectURL(n.target.files[0]);
+    document.getElementById("demo10").value = imgurl10;
+}, false);
+</script>
+<script>
+var fileInput11 = document.getElementById('img11');
+
+fileInput11.addEventListener('change', function(o) {
+  
+    var imgurl11 = URL.createObjectURL(o.target.files[0]);
+    document.getElementById("demo11").value = imgurl11;
+}, false);
+</script>
+<script>
+var fileInput12 = document.getElementById('img12');
+
+fileInput12.addEventListener('change', function(p) {
+  
+    var imgurl12 = URL.createObjectURL(p.target.files[0]);
+    document.getElementById("demo12").value = imgurl12;
+}, false);
+</script>
+<script>
+var fileInput13 = document.getElementById('img13');
+
+fileInput13.addEventListener('change', function(q) {
+  
+    var imgurl13 = URL.createObjectURL(q.target.files[0]);
+    document.getElementById("demo13").value = imgurl13;
+}, false);
+</script>
+<script>
+var fileInput14 = document.getElementById('img14');
+
+fileInput14.addEventListener('change', function(r) {
+  
+    var imgurl14 = URL.createObjectURL(r.target.files[0]);
+    document.getElementById("demo14").value = imgurl14;
+}, false);
+</script>
+<script>
+var fileInput15 = document.getElementById('img15');
+
+fileInput15.addEventListener('change', function(s) {
+  
+    var imgurl15 = URL.createObjectURL(s.target.files[0]);
+    document.getElementById("demo15").value = imgurl15;
+}, false);
+</script>
+<script>
+var fileInput16 = document.getElementById('img16');
+
+fileInput16.addEventListener('change', function(t) {
+  
+    var imgurl16 = URL.createObjectURL(t.target.files[0]);
+    document.getElementById("demo16").value = imgurl16;
+}, false);
+</script>
+<script>
+var fileInput17 = document.getElementById('img17');
+
+fileInput17.addEventListener('change', function(u) {
+  
+    var imgurl17 = URL.createObjectURL(u.target.files[0]);
+    document.getElementById("demo17").value = imgurl17;
+}, false);
+</script>
+<script>
+var fileInput18 = document.getElementById('img18');
+
+fileInput18.addEventListener('change', function(v) {
+  
+    var imgurl18 = URL.createObjectURL(v.target.files[0]);
+    document.getElementById("demo18").value = imgurl18;
+}, false);
+</script>
+<script>
+var fileInput19 = document.getElementById('img19');
+
+fileInput19.addEventListener('change', function(w) {
+  
+    var imgurl19 = URL.createObjectURL(w.target.files[0]);
+    document.getElementById("demo19").value = imgurl19;
+}, false);
+</script>
+<script>
+var fileInput20 = document.getElementById('img20');
+
+fileInput20.addEventListener('change', function(x) {
+  
+    var imgurl20 = URL.createObjectURL(x.target.files[0]);
+    document.getElementById("demo20").value = imgurl20;
+}, false);
+</script>
+<script>
+var fileInput21 = document.getElementById('img21');
+
+fileInput21.addEventListener('change', function(y) {
+  
+    var imgurl21 = URL.createObjectURL(y.target.files[0]);
+    document.getElementById("demo21").value = imgurl21;
+}, false);
+</script>
+<script>
+var fileInput22 = document.getElementById('img22');
+
+fileInput22.addEventListener('change', function(z) {
+  
+    var imgurl22 = URL.createObjectURL(z.target.files[0]);
+    document.getElementById("demo22").value = imgurl22;
+}, false);
+</script>
+<script>
+var fileInput23 = document.getElementById('img23');
+
+fileInput23.addEventListener('change', function(za) {
+  
+    var imgurl23 = URL.createObjectURL(za.target.files[0]);
+    document.getElementById("demo23").value = imgurl23;
+}, false);
+</script>
+<script>
+var fileInput24 = document.getElementById('img24');
+
+fileInput24.addEventListener('change', function(zb) {
+  
+    var imgurl24 = URL.createObjectURL(zb.target.files[0]);
+    document.getElementById("demo24").value = imgurl24;
+}, false);
+</script>
+<script>
+var fileInput25 = document.getElementById('img25');
+
+fileInput25.addEventListener('change', function(zc) {
+  
+    var imgurl25 = URL.createObjectURL(zc.target.files[0]);
+    document.getElementById("demo25").value = imgurl25;
+}, false);
+</script>
+<script>
+var fileInput26 = document.getElementById('img26');
+
+fileInput26.addEventListener('change', function(zd) {
+  
+    var imgurl26 = URL.createObjectURL(zd.target.files[0]);
+    document.getElementById("demo26").value = imgurl26;
+}, false);
+</script>
+<script>
+var fileInput27 = document.getElementById('img27');
+
+fileInput27.addEventListener('change', function(ze) {
+  
+    var imgurl27 = URL.createObjectURL(ze.target.files[0]);
+    document.getElementById("demo27").value = imgurl27;
+}, false);
+</script>
+<script>
+var fileInput28 = document.getElementById('img28');
+
+fileInput28.addEventListener('change', function(zf) {
+  
+    var imgurl28 = URL.createObjectURL(zf.target.files[0]);
+    document.getElementById("demo28").value = imgurl28;
+}, false);
+</script>
+<script>
+var fileInput29 = document.getElementById('img29');
+
+fileInput29.addEventListener('change', function(zg) {
+  
+    var imgurl29 = URL.createObjectURL(zg.target.files[0]);
+    document.getElementById("demo29").value = imgurl29;
+}, false);
+</script>
+<script>
+var fileInput30 = document.getElementById('img30');
+
+fileInput30.addEventListener('change', function(zh) {
+  
+    var imgurl30 = URL.createObjectURL(zh.target.files[0]);
+    document.getElementById("demo30").value = imgurl30;
+}, false);
+</script>
+<script>
+var fileInput31 = document.getElementById('img31');
+
+fileInput31.addEventListener('change', function(zi) {
+  
+    var imgurl31 = URL.createObjectURL(zi.target.files[0]);
+    document.getElementById("demo31").value = imgurl31;
+}, false);
+</script>
+<script>
+var fileInput32 = document.getElementById('img32');
+
+fileInput32.addEventListener('change', function(zj) {
+  
+    var imgurl32 = URL.createObjectURL(zj.target.files[0]);
+    document.getElementById("demo32").value = imgurl32;
+}, false);
+</script>
+<script>
+var $form = $('form#gsheetinsp'),
+    url = 'https://script.google.com/macros/s/AKfycbxzqYABlCmlmaHW6Ho8zg3D0mScek4Pg6dp-nGj98z-3U1QyDCj/exec',
+
+$submit = $('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).done(
+    // do something
+  );
+   $('#gsheetinsp')[0].reset();
+})
+</script>
+
+</form>
+   <script>
+function inspectionpoints(){
+var list = document.getElementById("list");
+var gsheetinsp = document.getElementById("inspdiv");
+//var stoptimediv = document.getElementById("stoptimediv");
+if (list.checked == true)
+{
+gsheetinsp.style.display = "block";
+//stoptimediv.style.display = "block";
+} else {
+gsheetinsp.style.display = "none";
+//stoptimediv.style.display = "none";
+  }
+}
+</script>
+
+<script>
+window.addEventListener('load',function loadData() {
+          var url = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=C4&output=csv";
+          xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function () {
+              if (xmlhttp.readyState == 4) {
+                  document.getElementById("customername").value = xmlhttp.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp.open("GET", url, true);
+          xmlhttp.send(null);
+      }
+      );
+     window.addEventListener('load', function loadData1() {
+          var url1 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=D4&output=csv";
+          xmlhttp1 = new XMLHttpRequest();
+          xmlhttp1.onreadystatechange = function () {
+              if (xmlhttp1.readyState == 4) {
+                  document.getElementById("equipmentassetnumber").value = xmlhttp1.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp1.open("GET", url1, true);
+          xmlhttp1.send(null);
+      }
+      );
+     window.addEventListener('load', function loadData2() {
+          var url2 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=E4&output=csv";
+          xmlhttp2 = new XMLHttpRequest();
+          xmlhttp2.onreadystatechange = function () {
+              if (xmlhttp2.readyState == 4) {
+                  document.getElementById("equipmentfieldname").value = xmlhttp2.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp2.open("GET", url2, true);
+          xmlhttp2.send(null);
+      }
+      );
+     window.addEventListener('load', function loadData3() {
+          var url3 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=F4&output=csv";
+          xmlhttp3 = new XMLHttpRequest();
+          xmlhttp3.onreadystatechange = function () {
+              if (xmlhttp3.readyState == 4) {
+                  document.getElementById("jobtype").value = xmlhttp3.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp3.open("GET", url3, true);
+          xmlhttp3.send(null);
+      }
+      );
+     window.addEventListener('load', function loadData4() {
+          var url4 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=A2:C2&output=csv";
+          xmlhttp4 = new XMLHttpRequest();
+          xmlhttp4.onreadystatechange = function () {
+              if (xmlhttp4.readyState == 4) {
+                  document.getElementById("jobnumber").value = xmlhttp4.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp4.open("GET", url4, true);
+          xmlhttp4.send(null);
+      }
+       );
+     window.addEventListener('load', function loadData5() {
+          var url5 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=G4&output=csv";
+          xmlhttp5 = new XMLHttpRequest();
+          xmlhttp5.onreadystatechange = function () {
+              if (xmlhttp5.readyState == 4) {
+                  document.getElementById("scopeofwork").value = xmlhttp5.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp5.open("GET", url5, true);
+          xmlhttp5.send(null);
+      }
+      );
+
+function backjobnum(){
+   document.getElementById("confirmjobnumber").style.display = "none";
+   document.getElementById("jobnoform").style.display = "block";
+}
+
+</script>
+
+</html>
