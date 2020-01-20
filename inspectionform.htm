@@ -11,15 +11,10 @@
     setTimeout(function () {
         window.location.reload(true)
     }, 100);
-      document.getElementById("click").style.display = "none";
 }
    </script>
 
-<script>
-function hideclick(){
-   document.getElementById("click").style.display = "none";
-}
-</script>
+
 
 <script>
 function accessegress(){
@@ -354,13 +349,6 @@ function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
 </script>
-
-   
-<div id="click" class="modal">
- <center><button class="submitbutton" onclick="refresh();hideclick();">
-  Click me
-  </button></center>
-</div>   
    
 
 <form id ="gsheetinsp" method="POST">
@@ -373,7 +361,8 @@ function closeNav() {
 <div id="info1">
   <td><br><br>
    <button class="button" style="font-size:40px;"style="font-size:35px;" id="myBtn2" type="button" onclick="window.location.href = 'https://lt47.github.io/Advance-Crane/jobnum.htm';">Back</button><br><br>
-
+   <button class="button" style="font-size:40px;"style="font-size:35px;" id="retrieve" type="button" onclick="refresh();">Click if auto-filled fields are incorrect</button><br><br>
+     
 <font size="8">Job Number:<br> <input class="buttontext" id="jobnumber" name="jobnumber" oninput="displayjobnum" type="text" style="font-size:35px" disabled/></font>
 </td><br><br>&nbsp;&nbsp;
     <td><font size="8">Customer:<br> <input class="buttontext" id="customername" name="customername" type="text" style="font-size:35px;" width="50"/></font></td><br><br>
