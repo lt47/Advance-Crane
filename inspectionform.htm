@@ -7,9 +7,12 @@
 <title></title>
    
 <script>
-   window.addEventListener('load',setTimeout(function () {
+   function refresh() {    
+    setTimeout(function () {
         window.location.reload(true)
-    },100));
+    }, 100);
+}
+   window.onload=refresh;
    </script>
 
 
