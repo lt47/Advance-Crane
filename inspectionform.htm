@@ -5,6 +5,88 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <title></title>
+
+<script>  
+function loadData() {
+          var url = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=C4&output=csv";
+          xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function () {
+              if (xmlhttp.readyState == 4) {
+                  document.getElementById("customername").value = xmlhttp.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp.open("GET", url, true);
+          xmlhttp.send(null);
+      }
+      
+      function loadData1() {
+          var url1 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=D4&output=csv";
+          xmlhttp1 = new XMLHttpRequest();
+          xmlhttp1.onreadystatechange = function () {
+              if (xmlhttp1.readyState == 4) {
+                  document.getElementById("equipmentassetnumber").value = xmlhttp1.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp1.open("GET", url1, true);
+          xmlhttp1.send(null);
+      }
+      
+      function loadData2() {
+          var url2 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=E4&output=csv";
+          xmlhttp2 = new XMLHttpRequest();
+          xmlhttp2.onreadystatechange = function () {
+              if (xmlhttp2.readyState == 4) {
+                  document.getElementById("equipmentfieldname").value = xmlhttp2.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp2.open("GET", url2, true);
+          xmlhttp2.send(null);
+      }
+      
+      function loadData3() {
+          var url3 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=F4&output=csv";
+          xmlhttp3 = new XMLHttpRequest();
+          xmlhttp3.onreadystatechange = function () {
+              if (xmlhttp3.readyState == 4) {
+                  document.getElementById("jobtype").value = xmlhttp3.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp3.open("GET", url3, true);
+          xmlhttp3.send(null);
+      }
+      
+      function loadData4() {
+          var url4 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=A2:C2&output=csv";
+          xmlhttp4 = new XMLHttpRequest();
+          xmlhttp4.onreadystatechange = function () {
+              if (xmlhttp4.readyState == 4) {
+                  document.getElementById("jobnumber").value = xmlhttp4.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp4.open("GET", url4, true);
+          xmlhttp4.send(null);
+      }
+       
+      function loadData5() {
+          var url5 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=G4&output=csv";
+          xmlhttp5 = new XMLHttpRequest();
+          xmlhttp5.onreadystatechange = function () {
+              if (xmlhttp5.readyState == 4) {
+                  document.getElementById("scopeofwork").value = xmlhttp5.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp5.open("GET", url5, true);
+          xmlhttp5.send(null);
+      }
+
+</script>   
+   
    
 <script>
    function refresh() {    
@@ -361,7 +443,7 @@ function closeNav() {
 <div id="info1">
   <td><br><br>
    <button class="button" style="font-size:40px;"style="font-size:35px;" id="myBtn2" type="button" onclick="window.location.href = 'https://lt47.github.io/Advance-Crane/jobnum.htm';">Back</button><br><br>
-   <button class="button" style="font-size:40px;"style="font-size:35px;" id="retrieve" type="button" onclick="refresh();">Click if auto-filled fields are incorrect</button><br><br>
+   <button class="button" style="font-size:40px;"style="font-size:35px;" id="retrieve" type="button" onclick="loadData();loadData1();loadData2();loadData3();loadData4();loadData5();">Click if auto-filled fields are incorrect</button><br><br>
      
 <font size="8">Job Number:<br> <input class="buttontext" id="jobnumber" name="jobnumber" oninput="displayjobnum" type="text" style="font-size:35px" disabled/></font>
 </td><br><br>&nbsp;&nbsp;
