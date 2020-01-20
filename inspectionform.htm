@@ -10,12 +10,15 @@
    function refresh() {    
     setTimeout(function () {
         window.location.reload(true)
-    }, 5000);
+    }, 100);
 }
-   window.onload=refresh;
-   alert("page refresh")
    </script>
 
+<script>
+function hideclick(){
+   document.getElementById("click").style.display = "none";
+}
+</script>
 
 <script>
 function accessegress(){
@@ -351,6 +354,13 @@ function closeNav() {
 }
 </script>
 
+   
+<div id="click" class="modal">
+ <center><button class="submitbutton" onclick="refresh();hideclick();">
+  Click me
+  </button></center>
+</div>   
+   
 
 <form id ="gsheetinsp" method="POST">
 
