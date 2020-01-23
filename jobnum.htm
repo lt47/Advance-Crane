@@ -1,9 +1,12 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>     
 <meta charset="utf-8"  content="width=device-width, initial-scale=1"> 
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <title></title>
-<script>
+
+<script>  
 function loadData() {
           var url = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=C4&output=csv";
           xmlhttp = new XMLHttpRequest();
@@ -81,17 +84,19 @@ function loadData() {
           xmlhttp5.open("GET", url5, true);
           xmlhttp5.send(null);
       }
-       
-function showinsp(){
-   document.getElementById("confirmjobnumber").style.display = "none";
-   document.getElementById("gsheetinsp").style.display = "block";
-}
 
-function backjobnum(){
-   document.getElementById("confirmjobnumber").style.display = "none";
-   document.getElementById("jobnoform").style.display = "block";
+</script>   
+   
+   
+<script>
+   function refresh() {    
+    setTimeout(function () {
+        window.location.reload(true)
+    }, 100);
 }
-</script>
+   </script>
+
+
 
 <script>
 function accessegress(){
@@ -131,7 +136,7 @@ var jobnuminput = document.getElementById("jobnumber1").value;
 </script>
 
 <style>
-<!-- body {font-family: Arial, Helvetica, sans-serif;} --> body {font-family: "Lato", sans-serif;} .sidenav {
+<!-- body {font-family: Oswald, Source Sans Pro , sans-serif;} --> body {font-family: "Source Sans Pro", sans-serif;} .sidenav {
   height: 100%;
   width: 125px;
   position: fixed;
@@ -371,6 +376,7 @@ height: 30px;
     </script>
     <base target="_top"/>
 </head>
+
 <body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -405,28 +411,9 @@ if ((document.getElementById("uname").value == "jeffchapman") &&
 }
 </script>
 
-
-
-<div>
-<center><a href="https://lt47.github.io/Advance-Crane/jobnum.htm"><img src="https://drive.google.com/uc?id=1Wq8ZyGez9quqC8tgmHf9nGks5_OZqh6y"  top=35px right=125px height=60 width=75/></a></center><br>
-</div>
-          
-<center>
-<div id="overlay" class="modal"><center><img src="https://drive.google.com/uc?id=1Wq8ZyGez9quqC8tgmHf9nGks5_OZqh6y"  top=35px right=125px height=60 width=75/></center><br><br><br>
-  <div class="container">
-      <label for="uname"><font size="8"><b>Username:</b></font></label>
-      <input style="font-size:35px;width:260px;" class="username" type="text" placeholder="Enter Username" name="uname" id="uname" required>
-<br><br>
-      <label for="psw"><font size="8"><b>Password:</b></font></label>
-      <input style="font-size:35px;width:260px;" type="password" placeholder="Enter Password" id="psw" name="psw" required>
-        <br><br>
-      <button style="font-size:40px;" class="submitbutton" onclick="authentication();">Login</button>
-    </div>
-</div></center>
-  
   </body>
-  
-  <div id="mySidepanel" class="sidepanel">
+
+ <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <a href="https://lt47.github.io/Advance-Crane/inspectionform.htm">Work/Inspection Form</a>
   <a href="https://lt47.github.io/Advance-Crane/jobofficehistory.htm">Job - Office History</a>
@@ -444,87 +431,637 @@ function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
 </script>
-  <center>
- <br><br><br><br><br>
- <div id="overlay1" style="display:none" class="modal"><center><img src="https://drive.google.com/uc?id=1Wq8ZyGez9quqC8tgmHf9nGks5_OZqh6y"  top=35px right=125px height=60 width=75/></center>
-  <div class="container">
-      <label style="font-size:35px;"><b><br><br>Access Site & Sign in @ Main office. 
-Walk/Inspect the area your choose to work on the crane in, ALWAYS erect cones and safety tape, this is an active heavy industry site with many workers in the area, the risk to others is VERY HIGH.<br><br> 
+   
 
-Complete your "Daily Hazard Assessment", Our Know Hazards Include but are not limited too:
-PPE: Eye Protection, Fall Protection, Hearing Protection, High Vizibility Wear & Safety Foot Wear are MINIMUM as per Client Requirements.<br><br>
+<form id ="gsheetinsp" method="POST">
 
-MEWP: Provided by Client. While Client APPROVES driving of the Sissor lift without Fall Protection, this is not acceptable as per ADVANCE CRANE POLICY - 100% Fall Protection is required as soon as you enter any Mobile Elevated Work Platform.<br><br>
+<div>
+<center><a href="https://lt47.github.io/Advance-Crane/jobnum.htm"><img src="https://drive.google.com/uc?id=1Wq8ZyGez9quqC8tgmHf9nGks5_OZqh6y"  top=35px right=125px height=60 width=75/></a></center><br>
+</div>
 
-Ladders: Not typically used.<br><br>
+<center>
+<div id="info1">
+  <td><br><br>
+   <button class="button" style="font-size:40px;"style="font-size:35px;" id="myBtn2" type="button" onclick="window.location.href = 'https://lt47.github.io/Advance-Crane/jobnum.htm';">Back</button><br><br>
+   <button class="button" style="font-size:40px;"style="font-size:35px;" id="retrieve" type="button" onclick="loadData();loadData1();loadData2();loadData3();loadData4();loadData5();">Click if auto-filled fields are incorrect</button><br><br>
+     
+<font size="8">Job Number:<br> <input class="buttontext" id="jobnumber" name="jobnumber" oninput="displayjobnum" type="text" style="font-size:35px" disabled/></font>
+</td><br><br>&nbsp;&nbsp;
+    <td><font size="8">Customer:<br> <input class="buttontext" id="customername" name="customername" type="text" style="font-size:35px;" width="50"/></font></td><br><br>
+    <td><font size="8">Equipment Asset #:<br> <input style="font-size:35px;" class="buttontext" id="equipmentassetnumber" name="equipmentassetnumber" type="text"/></font></td><br><br>
+ <td><font size="8">Equipment Field Name:<br> <input style="font-size:35px;" class="buttontext" id="equipmentfieldname" name="equipmentfieldname" type="text"/></font></td><br><br>
+  <td><font size="8">Job Type:<br> <input style="font-size:35px;" class="buttontext" id="jobtype" name="jobtype" type="text"/></font></td><br><br>
+  <td><font size="8">Scope of Work:<br> <textarea rows="20" cols="50" style="font-size:35px;"  id="scopeofwork" name="scopeofwork" type="text"/></textarea></font></td><br><br>
+  </div><br><br>
+  
+  <h2 style="font-size:40px;">
+  Crane Identification
+  </h2>  
+  <div id="info3">
+  <td><font size="8">Crane Manufacturer:<br> <input style="font-size:35px;" class="buttontext" id="cranemanufacturer" name="cranemanufacturer" type="text"/></font></td><br><br>
+  <td><font size="8">Crane Model:<br> <input style="font-size:35px;" class="buttontext" id="cranemodel" name="cranemodel" type="text"/></font></td><br><br>
+  <td><font size="8">Crane Serial Number:<br> <input style="font-size:35px;" class="buttontext" id="craneserialnumber" name="craneserialnumber" type="text"/></font></td><br><br>
+<br><br>
+  </div>
+  </center>
+<br><br><br><br><br>
 
-Powered Mobile Equipment: HIGH RISK! Lots of Battery Powered Fork Lifts and Pallet Jacks in constant motion plant wide. RECOMMEND: Use of a spotter when driving a MEWP from the Garage to the work area.<br><br>
+<center><h2><font size="8">Safety Set-up</font></h2>
+<h3><font size="7">Please check off your completed safety forms as required</font></h3>
 
-Power Tools: Typical use includes but is not limited to, Battery Operated Grease Gun, 3/8" Impact or Battery Operated Grinder. Ensure PPE is used & any guards are in place.<br><br>
+<label><font size="7"><input id="dailyhazard" class=largerCheckbox type="checkbox">Daily Hazard Assessment</font></label><br>
 
-Scaffolds: Not Used On this Site<br><br>
+<label><font size="7"><input id="fallprotection" class=largerCheckbox type="checkbox">Fall Protection Equipment Pre-Use Checklist</font></label><br>
 
-Crane Log Book: Client has not implemented a Crane Book System at this time.<br><br>
+<label><font size="7"><input id="ladderpreuse" class=largerCheckbox type="checkbox">Ladder Pre-Use Checklist</font></label><br>
 
-Anchors & Tie Offs/Work at Heights above 3 Meters: No Crane on this Site has a catwalk or other means of access, use of a MEWP is required. All three of the Client Provided MEWP's have provide/approved Tie Off Points.<br><br>
+<label><font size="7"><input id="aerialscissorlift" class=largerCheckbox type="checkbox">Aerial or Scissor Lift Pre-Use Checklist</font></label><br>
 
-Distractions/Moving Equipment/Noise&Communications/Vehicle&Pedestrian Hazards: This is an active Heavy Industrial Site with multiple employees in the plant/work area. Seek out eye contact and confirm all communications before entering/crossing someones work area. Ensure your work area is safe for others by erecting Safety Cones and Danger Marking Tape to create an exclusion zone large enough to protect people and property from harm.<br><br>
+<label><font size="7"><input id="companyvehicle" class=largerCheckbox type="checkbox">Weekly Company Vehicle Inspection Checklist</font></label><br>
 
-Electrical: Primary power is 575 Volt. Lock Out/Tag Out when not troubleshooting.<br><br>
+<label><font size="7"><input id="fireextinguisher" class=largerCheckbox type="checkbox">Monthly Fire Extinguisher Checklist</font></label><br>
 
-Flammable/Explosive Hazards: Use of any Solvent constitutes a Hazard. Use Caution when using even "Non-Flammable" Brake or Contact Cleaner, allow ample time for the solvent to flash off. Refer to provided WHMS Sheets.<br><br>
+</center><br><br><br><br><br>
 
-Ground Conditions: The floor has few drains or grates. If you do encounter and must cross any such object you MUST lower your MEWP to the lowest position before proceeding.<br><br>
-
-Lifting/Twisting Strains: Some Lifting twisting required, pre-plan your movements and get mechanical assistance if required.<br><br>
-
-Over Head Power Lines: Live 575Vac Buss Bars Overhead. Lock Out/Tag Out if your not troubleshooting and within 5 feet of.<br><br>
-
-Slips/Trips/Falls: This Site has many floor fixtures in/around the station jigs. Use caution when walking/driving thru the plant/work areas.<br><br>
-<button style="font-size:40px;" class="submitbutton" onclick="accessegressexit();showconfirmjobnumber();">Accept</button><br>
-
-
-</b><br><br>
-</label>
-      
-      </div></div>
+<center>
+<label><font size="8">Start Time: <input style="font-size:35px;" type="time" name="starttime" id="starttime"></font></label><br><br><br>
+  
+  <label><font size="8">Description of work completed: <textarea rows="20" cols="50" style="font-size:35px;" type="text" name="description-entry" id="description-entry"></textarea></font></label><br><br>
+  <label><font size="8">Parts:<br> <textarea rows="20" cols="50" style="font-size:35px;" type="text" name="parts-entry" id="parts-entry"></textarea></font></label><br><br>
+  <label><font size="8">Equipment:<br> <textarea rows="20" cols="50" style="font-size:35px;" type="text" name="equipment-entry" id="equipment-entry"></textarea></font></label>
+  <br><br><br>
+     <label><font size="8"><input id="list" class=largerCheckbox type="checkbox" onclick="inspectionpoints();">Inspection Form</font></label><br></center>
+ 
+ <center>
+ 
  
 
-<form id="jobnoform">
-  <font size="8">Job Number: <input class="buttontext" id="jobnumber1" name="jobnumber1" type="text" style="font-size:35px;height:70px;"/></font><br><br>
-  <button class="button" style="font-size:40px;background-color:green;" id="myBtn1" type="button" onclick="hidejobnum();accessegress();showconfirmjobnumber();">Enter Job Number</button>
-  <script>
-var $formx = $('form#jobnoform'),
-    urlx = 'https://script.google.com/macros/s/AKfycbz1qS-OkwqICk1WpH0I9BSEuw2kLxxIqVrhv_SZ8jchYcPWz-rw/exec',
+ <table id="inspdiv" style="display:none">
+  <tr>
+    <td>Component</td>
+  </tr>
+  <tr id="ROW1">
+  <td><font size="10"><b>Bridge</b></font></td>
+  </tr>
+   <tr>
+  <td style="color: black;">&nbsp;<font size="8"><input class="button" id="img" type="file" accept="image/*" /></font><input id ="demo" name="bridge-imagelink" type="hidden"/></td>
+    <tr>
+  <tr>
+    <td><font size="7">Bridge Manufacturer:</font><input type="text" style="font-size:35px" name="bridgemanufacturer" id="bridgemanufacturer"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Bridge Model:</font><input type="text" style="font-size:35px" name="bridgemodel" id="bridgemodel"></td>
+  </tr>
+ <tr>
+    <td><font size="7">Bridge Capacity:</font><input type="text" style="font-size:35px" name="bridgecapacity" id="bridgecapacity"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Bridge Serial Number:</font><input type="text" style="font-size:35px" name="bridgeserialnum" id="bridgeserialnum"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Bridge Type:</font><input type="text" style="font-size:35px" name="bridgetype" id="bridgetype"></td>
+  </tr>
+  <tr><td style="background-color:blue;color:white;"><font size="8">Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "bridge-mechanicalcondition" name = "bridge-mechanicalcondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="bridge-mechanicaldescription" name="bridge-mechanicaldescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+  
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Power & Panels</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Safety Disconnect Switch, Buss Bars, Collectors, Festooning, Connections & Terminations</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "bridge-electricalpowercondition" name = "bridge-electricalpowercondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="bridge-electricpowerdescription" name="bridge-electricpowerdescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
 
-$submitx = $('#myBtn1').on('click', function(e) {
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Controls</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Ensure that the Pendant/Remote controls are smooth and Limit Switches work correctly. Match the Bridge Directional Markings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "bridge-electricalcontrolscondition" name = "bridge-electricalcontrolscondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="bridge-electricalcontrolsdescription" name="bridge-electricalcontrolsdescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+  
+  <tr><td style="background-color:blue;color:white;"><font size="8">Structural</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Visually check the Bridge Beams and End Trucks for obvious signs of wear/damage/loose bolts </font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "bridge-structuralcondition" name = "bridge-structuralcondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="bridge-structuraldescription" name="bridge-structuraldescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+
+<tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="bridge-details" name="bridge-details">
+</textarea></font></td>
+</tr>
+
+  <tr id="divider">
+    <td></td>
+  </tr>    
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+  </tr>    
+  <tr id="divider">
+    <td></td>
+  </tr>    
+ 
+  <tr id="ROW1">
+  <td><font size="10"><b>Hoist #1</b></font></td>
+  </tr>
+   <tr>
+  <td style="color: black;">&nbsp;<font size="8"><input class="button" id="img1" type="file" accept="image/*" /></font><input id ="demo1" name="firsthoist-imagelink" type="hidden"/></td>
+    <tr>
+  <tr>
+    <td><font size="7">Hoist Manufacturer:</font><input type="text" style="font-size:35px" name="firsthoistmanufacturer" id="firsthoistmanufacturer"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Model:</font><input type="text" style="font-size:35px" name="firsthoistmodel" id="firsthoistmodel"></td>
+  </tr>
+ <tr>
+    <td><font size="7">Hoist Capacity:</font><input type="text" style="font-size:35px" name="firsthoistcapacity" id="firsthoistcapacity"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Serial Number:</font><input type="text" style="font-size:35px" name="firsthoistserialnum" id="firsthoistserialnum"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Type:</font><input type="text" style="font-size:35px" name="firsthoisttype" id="firsthoisttype"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Number of Falls:</font><input type="text" style="font-size:35px" name="firsthoistfalls" id="firsthoistfalls"></td>
+  </tr>
+  <tr><td style="background-color:blue;color:white;"><font size="8">Trolley Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "firsthoist-trolleymechanicalcondition" name = "firsthoist-trolleymechanicalcondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-trolleymechanicaldescription" name="firsthoist-trolleymechanicaldescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+
+   <tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "firsthoist-hoistmechanicalcondition" name = "firsthoist-hoistmechanicalcondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-hoistmechanicaldescription" name="firsthoist-hoistmechanicaldescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Lifting Device</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wire Rope/Chain, Hook Block, Hook & Safety Latch, Sheeves and Bearings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "firsthoist-hoistmechanicalliftcondition" name = "firsthoist-hoistmechanicalliftcondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-hoistmechanicalliftdescription" name="firsthoist-hoistmechanicalliftdescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Power & Panels</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Safety Disconnect Switch, Buss Bars, Collectors, Festooning, Connections & Terminations</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "firsthoist-electricalpowercondition" name = "firsthoist-electricalpowercondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-electricpowerdescription" name="firsthoist-electricpowerdescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Controls</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Ensure that the Pendant/Remote controls are smooth and Limit Switches work correctly. Match the firsthoist Directional Markings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "firsthoist-electricalcontrolscondition" name = "firsthoist-electricalcontrolscondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-electricalcontrolsdescription" name="firsthoist-electricalcontrolsdescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+  
+<tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-details" name="firsthoist-details">
+</textarea></font></td>
+</tr>
+
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+  </tr> 
+ 
+  <tr id="ROW1">
+  <td><font size="10"><b>Hoist #2</b></font></td>
+  </tr>
+   <tr>
+  <td style="color: black;">&nbsp;<font size="8"><input class="button" id="img2" type="file" accept="image/*" /></font><input id ="demo2" name="secondhoist-imagelink" type="hidden"/></td>
+    <tr>
+  <tr>
+    <td><font size="7">Hoist Manufacturer:</font><input type="text" style="font-size:35px" name="secondhoistmanufacturer" id="secondhoistmanufacturer"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Model:</font><input type="text" style="font-size:35px" name="secondhoistmodel" id="secondhoistmodel"></td>
+  </tr>
+ <tr>
+    <td><font size="7">Hoist Capacity:</font><input type="text" style="font-size:35px" name="secondhoistcapacity" id="secondhoistcapacity"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Serial Number:</font><input type="text" style="font-size:35px" name="secondhoistserialnum" id="secondhoistserialnum"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Type:</font><input type="text" style="font-size:35px" name="secondhoisttype" id="secondhoisttype"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Number of Falls:</font><input type="text" style="font-size:35px" name="secondhoistfalls" id="secondhoistfalls"></td>
+  </tr>
+  <tr><td style="background-color:blue;color:white;"><font size="8">Trolley Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "secondhoist-trolleymechanicalcondition" name = "secondhoist-trolleymechanicalcondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-trolleymechanicaldescription" name="secondhoist-trolleymechanicaldescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+
+   <tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "secondhoist-hoistmechanicalcondition" name = "secondhoist-hoistmechanicalcondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-hoistmechanicaldescription" name="secondhoist-hoistmechanicaldescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Lifting Device</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wire Rope/Chain, Hook Block, Hook & Safety Latch, Sheeves and Bearings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "secondhoist-hoistmechanicalliftcondition" name = "secondhoist-hoistmechanicalliftcondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-hoistmechanicalliftdescription" name="secondhoist-hoistmechanicalliftdescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Power & Panels</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Safety Disconnect Switch, Buss Bars, Collectors, Festooning, Connections & Terminations</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "secondhoist-electricalpowercondition" name = "secondhoist-electricalpowercondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-electricpowerdescription" name="secondhoist-electricpowerdescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Controls</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Ensure that the Pendant/Remote controls are smooth and Limit Switches work correctly. Match the secondhoist Directional Markings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "secondhoist-electricalcontrolscondition" name = "secondhoist-electricalcontrolscondition" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-electricalcontrolsdescription" name="secondhoist-electricalcontrolsdescription">Inspected - No Defects Found
+</textarea></font>
+    </td>
+  </tr>
+  
+<tr>
+<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-details" name="secondhoist-details">
+</textarea></font></td>
+</tr>
+      
+  <tr id="divider">
+    <td></td>
+  </tr>
+
+  <tr id="ROW7">
+    <td>Inspector Name:<input style="font-size:35px;" id="inspectorname" name="inspectorname"type="text"/></td>
+    </tr>
+<tr id="divider">
+    <td></td>
+  </tr>
+<tr id="ROW7">
+    <td>Initials:<input style="font-size:35px;"  id="inspectorinitials" name="inspectorinitials" type="text"/></td>
+    </tr>
+<tr id="divider">
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+  </tr>
+    <tr id="ROW7">
+    <td>Client Name:<input style="font-size:35px;" id="clientname" name="clientname" type="text"/></td>
+  </tr>
+<tr id="divider">
+    <td></td>
+  </tr>
+<tr id="ROW7">
+    <td>Initials:<input style="font-size:35px;" id="clientinitials" name="clientinitials" type="text"/></td>
+  </tr>
+<br><br><br>
+
+ <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+    <td>Safety Tear Down</td>
+  </tr>
+  <tr>
+    <td>Please check to indicate you have done the following before leaving the job site</td>
+  </tr>
+  <tr>
+    <td><input id="toolsrigging" class=largerCheckbox type="checkbox">All tools and rigging has been removed and accounted for.</td>
+  </tr>
+  <tr>
+    <td><input id="safetybarricades" class=largerCheckbox type="checkbox">All safety barricades, cones and marking tape has been removed and is accounted for.</td>
+  </tr>
+  <tr>
+    <td><input id="lockremoval" class=largerCheckbox type="checkbox">All locks have been removed.</td>
+  </tr>
+  <tr>
+    <td><input id="partsandmaterial" class=largerCheckbox type="checkbox">All material and parts have been removed and any required clean-up of the crane or lift is complete.</td>
+  </tr>
+  <tr>
+    <td><input id="clientcheck" class=largerCheckbox type="checkbox">The client has been informed that the job is complete and is satisfied.</td>
+  </tr>
+  <tr>
+  <td>Stop Time: <input style="font-size:35px;" type="time" name="stoptime" id="stoptime"></td>
+  </tr>
+  <tr>
+  <td style="background-color:yellow;"><font size="7">Job Hours</font></td>
+  </tr>
+  <tr>
+    <td><font size="6">Regular Time:</font><input type="text" style="font-size:35px" name="regulartime" id="regulartime"></td>
+  </tr>
+  <tr>
+    <td><font size="6">Double Time:</font><input type="text" style="font-size:35px" name="doubletime" id="doubletime"></td>
+  </tr>
+  <tr>
+    <td><font size="6">Over Time:</font><input type="text" style="font-size:35px" name="overtime" id="overtime"></td>
+  </tr>
+  </table><br><br><br><br>
+     
+ 
+  
+ <b><button class="submitbutton" id="submit-form" type="submit">Submit</button> </b></center> 
+  <script>
+var fileInput = document.getElementById('img');
+//var preview = document.getElementById('preview');
+
+fileInput.addEventListener('change', function(e) {
+  
+    var imgurl = URL.createObjectURL(e.target.files[0]);
+    document.getElementById("demo").value = imgurl;
+}, false);
+</script>
+<script>
+var fileInput2 = document.getElementById('img2');
+
+fileInput2.addEventListener('change', function(f) {
+  
+    var imgurl2 = URL.createObjectURL(f.target.files[0]);
+    document.getElementById("demo2").value = imgurl2;
+}, false);
+</script>
+<script>
+var fileInput3 = document.getElementById('img3');
+
+fileInput3.addEventListener('change', function(g) {
+  
+    var imgurl3 = URL.createObjectURL(g.target.files[0]);
+    document.getElementById("demo3").value = imgurl3;
+}, false);
+</script>
+<script>
+var fileInput4 = document.getElementById('img4');
+
+fileInput4.addEventListener('change', function(h) {
+  
+    var imgurl4 = URL.createObjectURL(h.target.files[0]);
+    document.getElementById("demo4").value = imgurl4;
+}, false);
+</script>
+<script>
+var fileInput5 = document.getElementById('img5');
+
+fileInput5.addEventListener('change', function(i) {
+  
+    var imgurl5 = URL.createObjectURL(i.target.files[0]);
+    document.getElementById("demo5").value = imgurl5;
+}, false);
+</script>
+
+<script>
+var $form = $('form#gsheetinsp'),
+    url = 'https://script.google.com/macros/s/AKfycbxUnmxW1qDW6HHtnZ6OfXpMdUmbnvUOR1797H7gqV3c1jXQTRE/exec',
+
+$submit = $('#submit-form').on('click', function(e) {
   e.preventDefault();
   var jqxhr = $.ajax({
-    url: urlx,
+    url: url,
     method: "GET",
     dataType: "json",
-    data: $formx.serializeObject()
+    data: $form.serializeObject()
   }).done(
     // do something
   );
+   $('#gsheetinsp')[0].reset();
 })
 </script>
-  </form>
-  
-<div id="confirmjobnumber" style="display:none">
- 
- <h2 style="font-size:43px;">
- Confirm job number entry</h2>
- <input style="font-size:35px;" type=text id="jobnumbertext" disabled>
- <br><br>
- <button class="button" style="font-size:40px;" id="myBtn" type="button" onclick="window.location.href = 'https://lt47.github.io/Advance-Crane/inspectionform.htm';">Confirm</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <button class="button" id="myBtn3" onclick="backjobnum();" style="font-size:40px;" type="button">
- Back
- </button>
 
-</div>
-  
-
+</form>
    <script>
 function inspectionpoints(){
 var list = document.getElementById("list");
@@ -542,13 +1079,90 @@ gsheetinsp.style.display = "none";
 </script>
 
 <script>
- $("#jobnumber1").change(function(){
-    update();
-});
+window.addEventListener('load',function loadData() {
+          var url = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=C4&output=csv";
+          xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function () {
+              if (xmlhttp.readyState == 4) {
+                  document.getElementById("customername").value = xmlhttp.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp.open("GET", url, true);
+          xmlhttp.send(null);
+      }
+      );
+     window.addEventListener('load', function loadData1() {
+          var url1 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=D4&output=csv";
+          xmlhttp1 = new XMLHttpRequest();
+          xmlhttp1.onreadystatechange = function () {
+              if (xmlhttp1.readyState == 4) {
+                  document.getElementById("equipmentassetnumber").value = xmlhttp1.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp1.open("GET", url1, true);
+          xmlhttp1.send(null);
+      }
+      );
+     window.addEventListener('load', function loadData2() {
+          var url2 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=E4&output=csv";
+          xmlhttp2 = new XMLHttpRequest();
+          xmlhttp2.onreadystatechange = function () {
+              if (xmlhttp2.readyState == 4) {
+                  document.getElementById("equipmentfieldname").value = xmlhttp2.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp2.open("GET", url2, true);
+          xmlhttp2.send(null);
+      }
+      );
+     window.addEventListener('load', function loadData3() {
+          var url3 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=F4&output=csv";
+          xmlhttp3 = new XMLHttpRequest();
+          xmlhttp3.onreadystatechange = function () {
+              if (xmlhttp3.readyState == 4) {
+                  document.getElementById("jobtype").value = xmlhttp3.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp3.open("GET", url3, true);
+          xmlhttp3.send(null);
+      }
+      );
+     window.addEventListener('load', function loadData4() {
+          var url4 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=A2:C2&output=csv";
+          xmlhttp4 = new XMLHttpRequest();
+          xmlhttp4.onreadystatechange = function () {
+              if (xmlhttp4.readyState == 4) {
+                  document.getElementById("jobnumber").value = xmlhttp4.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp4.open("GET", url4, true);
+          xmlhttp4.send(null);
+      }
+       );
+     window.addEventListener('load', function loadData5() {
+          var url5 = "https://docs.google.com/spreadsheet/pub?key=18-b4lZpiEH8GqRFpAtuNoGeY0vbuSz5sUzN9UYMR-Sc&single=true&gid=310589616&range=G4&output=csv";
+          xmlhttp5 = new XMLHttpRequest();
+          xmlhttp5.onreadystatechange = function () {
+              if (xmlhttp5.readyState == 4) {
+                  document.getElementById("scopeofwork").value = xmlhttp5.responseText;
+                  //alert(xmlhttp.responseText);
+              }
+          };
+          xmlhttp5.open("GET", url5, true);
+          xmlhttp5.send(null);
+      }
+      );
 
-function update() {
-  $("#jobnumbertext").val($('#jobnumber1').val());
-  }
-  </script>
+function backjobnum(){
+   document.getElementById("confirmjobnumber").style.display = "none";
+   document.getElementById("jobnoform").style.display = "block";
+}
+
+</script>
 
 </html>
