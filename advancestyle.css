@@ -25,7 +25,10 @@ td, th {
   padding: 8px;
   font-size: 40px;
 }
-
+tbody{
+    width: 100%;
+    display: table;
+}
 .modal { 
   position: fixed; 
   z-index: 1; 
