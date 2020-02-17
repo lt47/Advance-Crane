@@ -4,7 +4,7 @@
 <meta http-equiv="cache-control" content="no-cache" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-<title></title>
+<link rel="stylesheet" type="text/css" href="https://lt47.github.io/Advance-Crane/advancestyle.css">
 
 <script>  
 function loadData() {
@@ -87,7 +87,6 @@ function loadData() {
 
 </script>   
    
-   
 <script>
    function refresh() {    
     setTimeout(function () {
@@ -95,7 +94,6 @@ function loadData() {
     }, 100);
 }
    </script>
-
 
 
 <script>
@@ -135,233 +133,288 @@ var jobnuminput = document.getElementById("jobnumber1").value;
 }
 </script>
 
-<style>
-<!-- body {font-family: Oswald, Source Sans Pro , sans-serif;} --> body {font-family: "Source Sans Pro", sans-serif;} .sidenav {
-  height: 100%;
-  width: 125px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #4a4a4a;
-  overflow-x: hidden;
-  padding-top: 20px;
-  font-size: 1.3em;
+<script>
+function navtodefects(){
+document.getElementById("defsbtn").click();
+}
+</script>
+
+<script>
+function nutest(){
+var a = document.getElementById("bridge-mechanicalcondition").value;
+document.getElementById("copybridge-mechanicalcondition").value = a;
+var b = document.getElementById("bridge-mechanicaldescription").value;
+document.getElementById("copybridge-mechanicaldescription").value = b;
+var c = document.getElementById("bridge-electricalpowercondition").value;
+document.getElementById("copybridge-electricalpowercondition").value = c;
+var d = document.getElementById("bridge-electricpowerdescription").value;
+document.getElementById("copybridge-electricpowerdescription").value = d;
+var e = document.getElementById("bridge-electricalcontrolscondition").value;
+document.getElementById("copybridge-electricalcontrolscondition").value = e;
+var f = document.getElementById("bridge-electricalcontrolsdescription").value;
+document.getElementById("copybridge-electricalcontrolsdescription").value = f;
+var g = document.getElementById("bridge-structuralcondition").value;
+document.getElementById("copybridge-structuralcondition").value = g;
+var h = document.getElementById("bridge-structuraldescription").value;
+document.getElementById("copybridge-structuraldescription").value = h;
+
+//Hoist#1
+var i = document.getElementById("firsthoist-trolleymechanicalcondition").value;
+document.getElementById("copyfirsthoist-trolleymechanicalcondition").value = i;
+var j = document.getElementById("firsthoist-trolleymechanicaldescription").value;
+document.getElementById("copyfirsthoist-trolleymechanicaldescription").value = j;
+var k = document.getElementById("firsthoist-hoistmechanicalcondition").value;
+document.getElementById("copyfirsthoist-hoistmechanicalcondition").value = k;
+var l = document.getElementById("firsthoist-hoistmechanicaldescription").value;
+document.getElementById("copyfirsthoist-hoistmechanicaldescription").value = l;
+var m = document.getElementById("firsthoist-hoistmechanicalliftcondition").value;
+document.getElementById("copyfirsthoist-hoistmechanicalliftcondition").value = m;
+var n = document.getElementById("firsthoist-hoistmechanicalliftdescription").value;
+document.getElementById("copyfirsthoist-hoistmechanicalliftdescription").value = n;
+var o = document.getElementById("firsthoist-electricalpowercondition").value;
+document.getElementById("copyfirsthoist-electricalpowercondition").value = o;
+var p = document.getElementById("firsthoist-electricpowerdescription").value;
+document.getElementById("copyfirsthoist-electricpowerdescription").value = p;
+var q = document.getElementById("firsthoist-electricalcontrolscondition").value;
+document.getElementById("copyfirsthoist-electricalcontrolscondition").value = q;
+var r = document.getElementById("firsthoist-electricalcontrolsdescription").value;
+document.getElementById("copyfirsthoist-electricalcontrolsdescription").value = r;
+
+//Hoist#2
+var s = document.getElementById("secondhoist-trolleymechanicalcondition").value;
+document.getElementById("copysecondhoist-trolleymechanicalcondition").value = s;
+var t = document.getElementById("secondhoist-trolleymechanicaldescription").value;
+document.getElementById("copysecondhoist-trolleymechanicaldescription").value = t;
+var u = document.getElementById("secondhoist-hoistmechanicalcondition").value;
+document.getElementById("copysecondhoist-hoistmechanicalcondition").value = u;
+var v = document.getElementById("secondhoist-hoistmechanicaldescription").value;
+document.getElementById("copysecondhoist-hoistmechanicaldescription").value = v;
+var w = document.getElementById("secondhoist-hoistmechanicalliftcondition").value;
+document.getElementById("copysecondhoist-hoistmechanicalliftcondition").value = w;
+var x = document.getElementById("secondhoist-hoistmechanicalliftdescription").value;
+document.getElementById("copysecondhoist-hoistmechanicalliftdescription").value = x;
+var y = document.getElementById("secondhoist-electricalpowercondition").value;
+document.getElementById("copysecondhoist-electricalpowercondition").value = y;
+var z = document.getElementById("secondhoist-electricpowerdescription").value;
+document.getElementById("copysecondhoist-electricpowerdescription").value = z;
+var aa = document.getElementById("secondhoist-electricalcontrolscondition").value;
+document.getElementById("copysecondhoist-electricalcontrolscondition").value = aa;
+var ab = document.getElementById("secondhoist-electricalcontrolsdescription").value;
+document.getElementById("copysecondhoist-electricalcontrolsdescription").value = ab;
+
+//Hoist#3
+var ac = document.getElementById("thirdhoist-trolleymechanicalcondition").value;
+document.getElementById("copythirdhoist-trolleymechanicalcondition").value = ac;
+var ad = document.getElementById("thirdhoist-trolleymechanicaldescription").value;
+document.getElementById("copythirdhoist-trolleymechanicaldescription").value = ad;
+var ae = document.getElementById("thirdhoist-hoistmechanicalcondition").value;
+document.getElementById("copythirdhoist-hoistmechanicalcondition").value = ae;
+var af = document.getElementById("thirdhoist-hoistmechanicaldescription").value;
+document.getElementById("copythirdhoist-hoistmechanicaldescription").value = af;
+var ag = document.getElementById("thirdhoist-hoistmechanicalliftcondition").value;
+document.getElementById("copythirdhoist-hoistmechanicalliftcondition").value = ag;
+var ah = document.getElementById("thirdhoist-hoistmechanicalliftdescription").value;
+document.getElementById("copythirdhoist-hoistmechanicalliftdescription").value = ah;
+var ai = document.getElementById("thirdhoist-electricalpowercondition").value;
+document.getElementById("copythirdhoist-electricalpowercondition").value = ai;
+var aj = document.getElementById("thirdhoist-electricpowerdescription").value;
+document.getElementById("copythirdhoist-electricpowerdescription").value = aj;
+var ak = document.getElementById("thirdhoist-electricalcontrolscondition").value;
+document.getElementById("copythirdhoist-electricalcontrolscondition").value = ak;
+var al = document.getElementById("thirdhoist-electricalcontrolsdescription").value;
+document.getElementById("copythirdhoist-electricalcontrolsdescription").value = al;
+
+//Hoist#4
+var am = document.getElementById("fourthhoist-trolleymechanicalcondition").value;
+document.getElementById("copyfourthhoist-trolleymechanicalcondition").value = am;
+var an = document.getElementById("fourthhoist-trolleymechanicaldescription").value;
+document.getElementById("copyfourthhoist-trolleymechanicaldescription").value = an;
+var ao = document.getElementById("fourthhoist-hoistmechanicalcondition").value;
+document.getElementById("copyfourthhoist-hoistmechanicalcondition").value = ao;
+var ap = document.getElementById("fourthhoist-hoistmechanicaldescription").value;
+document.getElementById("copyfourthhoist-hoistmechanicaldescription").value = ap;
+var aq = document.getElementById("fourthhoist-hoistmechanicalliftcondition").value;
+document.getElementById("copyfourthhoist-hoistmechanicalliftcondition").value = aq;
+var ar = document.getElementById("fourthhoist-hoistmechanicalliftdescription").value;
+document.getElementById("copyfourthhoist-hoistmechanicalliftdescription").value = ar;
+var as = document.getElementById("fourthhoist-electricalpowercondition").value;
+document.getElementById("copyfourthhoist-electricalpowercondition").value = as;
+var at = document.getElementById("fourthhoist-electricpowerdescription").value;
+document.getElementById("copyfourthhoist-electricpowerdescription").value = at;
+var au = document.getElementById("fourthhoist-electricalcontrolscondition").value;
+document.getElementById("copyfourthhoist-electricalcontrolscondition").value = au;
+var av = document.getElementById("fourthhoist-electricalcontrolsdescription").value;
+document.getElementById("copyfourthhoist-electricalcontrolsdescription").value = av;
+
+//Hoist#5
+var aw = document.getElementById("fifthhoist-trolleymechanicalcondition").value;
+document.getElementById("copyfifthhoist-trolleymechanicalcondition").value = aw;
+var ax = document.getElementById("fifthhoist-trolleymechanicaldescription").value;
+document.getElementById("copyfifthhoist-trolleymechanicaldescription").value = ax;
+var ay = document.getElementById("fifthhoist-hoistmechanicalcondition").value;
+document.getElementById("copyfifthhoist-hoistmechanicalcondition").value = ay;
+var az = document.getElementById("fifthhoist-hoistmechanicaldescription").value;
+document.getElementById("copyfifthhoist-hoistmechanicaldescription").value = az;
+var ba = document.getElementById("fifthhoist-hoistmechanicalliftcondition").value;
+document.getElementById("copyfifthhoist-hoistmechanicalliftcondition").value = ba;
+var bb = document.getElementById("fifthhoist-hoistmechanicalliftdescription").value;
+document.getElementById("copyfifthhoist-hoistmechanicalliftdescription").value = bb;
+var bc = document.getElementById("fifthhoist-electricalpowercondition").value;
+document.getElementById("copyfifthhoist-electricalpowercondition").value = bc;
+var bd = document.getElementById("fifthhoist-electricpowerdescription").value;
+document.getElementById("copyfifthhoist-electricpowerdescription").value = bd;
+var be = document.getElementById("fifthhoist-electricalcontrolscondition").value;
+document.getElementById("copyfifthhoist-electricalcontrolscondition").value = be;
+var bf = document.getElementById("fifthhoist-electricalcontrolsdescription").value;
+document.getElementById("copyfifthhoist-electricalcontrolsdescription").value = bf;
+
+//Hoist#6
+var bg = document.getElementById("sixthhoist-trolleymechanicalcondition").value;
+document.getElementById("copysixthhoist-trolleymechanicalcondition").value = bg;
+var bh = document.getElementById("sixthhoist-trolleymechanicaldescription").value;
+document.getElementById("copysixthhoist-trolleymechanicaldescription").value = bh;
+var bi = document.getElementById("sixthhoist-hoistmechanicalcondition").value;
+document.getElementById("copysixthhoist-hoistmechanicalcondition").value = bi;
+var bj = document.getElementById("sixthhoist-hoistmechanicaldescription").value;
+document.getElementById("copysixthhoist-hoistmechanicaldescription").value = bj;
+var bk = document.getElementById("sixthhoist-hoistmechanicalliftcondition").value;
+document.getElementById("copysixthhoist-hoistmechanicalliftcondition").value = bk;
+var bl = document.getElementById("sixthhoist-hoistmechanicalliftdescription").value;
+document.getElementById("copysixthhoist-hoistmechanicalliftdescription").value = bl;
+var bm = document.getElementById("sixthhoist-electricalpowercondition").value;
+document.getElementById("copysixthhoist-electricalpowercondition").value = bm;
+var bn = document.getElementById("sixthhoist-electricpowerdescription").value;
+document.getElementById("copysixthhoist-electricpowerdescription").value = bn;
+var bo = document.getElementById("sixthhoist-electricalcontrolscondition").value;
+document.getElementById("copysixthhoist-electricalcontrolscondition").value = bo;
+var bp = document.getElementById("sixthhoist-electricalcontrolsdescription").value;
+document.getElementById("copysixthhoist-electricalcontrolsdescription").value = bp;
+  
+}
+</script>
+
+<script>
+function showdefs(){
+document.getElementById("gsheetinsp").style.display = "none";
+document.getElementById("defectsandrepairs").style.display = "block";
+}
+</script>
+
+<script>
+function numofhoists(){
+if((document.getElementById("numberofhoists").value == "1")){
+  document.getElementById("hoist1").style.display = "block";
+  document.getElementById("hoist2").style.display = "none";
+  document.getElementById("hoist3").style.display = "none";
+  document.getElementById("hoist4").style.display = "none";
+  document.getElementById("hoist5").style.display = "none";
+  document.getElementById("hoist6").style.display = "none";
+}
+else if((document.getElementById("numberofhoists").value == "2")){
+  document.getElementById("hoist1").style.display = "block";
+  document.getElementById("hoist2").style.display = "block";
+  document.getElementById("hoist3").style.display = "none";
+  document.getElementById("hoist4").style.display = "none";
+  document.getElementById("hoist5").style.display = "none";
+  document.getElementById("hoist6").style.display = "none";
+}
+else if((document.getElementById("numberofhoists").value == "3")){
+  document.getElementById("hoist1").style.display = "block";
+  document.getElementById("hoist2").style.display = "block";
+  document.getElementById("hoist3").style.display = "block";
+  document.getElementById("hoist4").style.display = "none";
+  document.getElementById("hoist5").style.display = "none";
+  document.getElementById("hoist6").style.display = "none";
+}
+else if((document.getElementById("numberofhoists").value == "4")){
+  document.getElementById("hoist1").style.display = "block";
+  document.getElementById("hoist2").style.display = "block";
+  document.getElementById("hoist3").style.display = "block";
+  document.getElementById("hoist4").style.display = "block";
+  document.getElementById("hoist5").style.display = "none";
+  document.getElementById("hoist6").style.display = "none";
+}
+else if((document.getElementById("numberofhoists").value == "5")){
+  document.getElementById("hoist1").style.display = "block";
+  document.getElementById("hoist2").style.display = "block";
+  document.getElementById("hoist3").style.display = "block";
+  document.getElementById("hoist4").style.display = "block";
+  document.getElementById("hoist5").style.display = "block";
+  document.getElementById("hoist6").style.display = "none";
+}
+else if((document.getElementById("numberofhoists").value == "6")){
+  document.getElementById("hoist1").style.display = "block";
+  document.getElementById("hoist2").style.display = "block";
+  document.getElementById("hoist3").style.display = "block";
+  document.getElementById("hoist4").style.display = "block";
+  document.getElementById("hoist5").style.display = "block";
+  document.getElementById("hoist6").style.display = "block";
 }
 
-.main {font-size: 1.2em;
+else{
+alert("Its working...I think");
+}
+}
+</script>
+
+<script>
+function copynumofhoists(){
+if((document.getElementById("copynumberofhoists").value == "1")){
+  document.getElementById("copyhoist1").style.display = "block";
+  document.getElementById("copyhoist2").style.display = "none";
+  document.getElementById("copyhoist3").style.display = "none";
+  document.getElementById("copyhoist4").style.display = "none";
+  document.getElementById("copyhoist5").style.display = "none";
+  document.getElementById("copyhoist6").style.display = "none";
+}
+else if((document.getElementById("copynumberofhoists").value == "2")){
+  document.getElementById("copyhoist1").style.display = "block";
+  document.getElementById("copyhoist2").style.display = "block";
+  document.getElementById("copyhoist3").style.display = "none";
+  document.getElementById("copyhoist4").style.display = "none";
+  document.getElementById("copyhoist5").style.display = "none";
+  document.getElementById("copyhoist6").style.display = "none";
+}
+else if((document.getElementById("copynumberofhoists").value == "3")){
+  document.getElementById("copyhoist1").style.display = "block";
+  document.getElementById("copyhoist2").style.display = "block";
+  document.getElementById("copyhoist3").style.display = "block";
+  document.getElementById("copyhoist4").style.display = "none";
+  document.getElementById("copyhoist5").style.display = "none";
+  document.getElementById("copyhoist6").style.display = "none";
+}
+else if((document.getElementById("copynumberofhoists").value == "4")){
+  document.getElementById("copyhoist1").style.display = "block";
+  document.getElementById("copyhoist2").style.display = "block";
+  document.getElementById("copyhoist3").style.display = "block";
+  document.getElementById("copyhoist4").style.display = "block";
+  document.getElementById("copyhoist5").style.display = "none";
+  document.getElementById("copyhoist6").style.display = "none";
+}
+else if((document.getElementById("copynumberofhoists").value == "5")){
+  document.getElementById("copyhoist1").style.display = "block";
+  document.getElementById("copyhoist2").style.display = "block";
+  document.getElementById("copyhoist3").style.display = "block";
+  document.getElementById("copyhoist4").style.display = "block";
+  document.getElementById("copyhoist5").style.display = "block";
+  document.getElementById("copyhoist6").style.display = "none";
+}
+else if((document.getElementById("copynumberofhoists").value == "6")){
+  document.getElementById("copyhoist1").style.display = "block";
+  document.getElementById("copyhoist2").style.display = "block";
+  document.getElementById("copyhoist3").style.display = "block";
+  document.getElementById("copyhoist4").style.display = "block";
+  document.getElementById("copyhoist5").style.display = "block";
+  document.getElementById("copyhoist6").style.display = "block";
 }
 
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  font-size: 35px;
+else{
+alert("Its working...I think");
 }
-td, th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
-  font-size: 40px;
 }
+</script>
 
-.modal { 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
-  padding-top: 60px;
-  font-size: 1.1em;
-}
 
-input[type="text"]
-{
-    font-size:35px;
-}
-
-input[type="button"]
-{
-    font-size:40px;
-}
-
-select
-{
-    font-size:13px;
-}
-table tr#divider  {background-color:#000000;}
-table tr#ROW1  {background-color:#dddddd;}
-table tr#ROW2  {background-color:#dddddd;}
-table tr#ROW3  {background-color:#dddddd;}
-table tr#ROW4  {background-color:#dddddd;}
-table tr#ROW5  {background-color:#dddddd;}
-table tr#ROW6  {background-color:#dddddd;}
-table tr#ROW7  {background-color:#F7A33B;}
-table tr#des  {font-size:0.7em;}
-div#info1  {background-color:#F2EE79;}
-div#info2  {background-color:#F2EE79;}
-div#info3  {background-color:#F2EE79;}
-div#info4  {background-color:#F2EE79;}
-
-#overlay {
-  position: fixed;
-  width: 100%; 
-  height: 100%; 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color:#000000; 
-  z-index: 2; 
-  cursor: pointer; 
-  font-size: 1.7em;
-  color:#dddddd;
-}
-#overlay1 {
-  position: fixed;
-  width: 100%; 
-  height: 100%; 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color:#000000; 
-  z-index: 2; 
-  cursor: pointer; 
-  font-size: 1.7em;
-  color:#dddddd;
-}
-input[type=password] {
-  width: 20%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  font-size:15px;
-}
-.username{width: 20%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;}
-.greenfield {background-color: #00A146;}
-.yellowfield {background-color: #EEF52C;}
-.redfield {background-color: #F71302;}
-.grayfield {background-color:#dddddd;}
-.orangefield {background-color:#fc7f03;}
-.bluefield {background-color:#0202fa;}
-.purplefield {background-color:#e605ff;}
-.torqfield {background-color:#05ffd1;}
-.limegreenfield {background-color:#82ff05;}
-.pinkfield {background-color:#ff8cea;}
-.peachfield {background-color:#f0c3a3;}
-.button {font-size: 40px;}
-.submitbutton {font-size: 40px;
-padding: 15px 32px;
-background-color: #00A146;
-}
-.buttontext {font-size:0.4em;}
-input.largerCheckbox
-{
-width: 30px;
-height: 30px;
-}
-
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-#frame {
- width: 420px;
- height: 150px; 
- overflow:hidden;
- position:relative;
-}
-#bottomframe {
- width: 400px;
- height: 100px;
- position:absolute;
- top:53px;
- left:11px;
- background-color:#F2EE79;
-}
-#leftframe {
- width: 45px;
- height: 150px;
- position:absolute;
- top:3px;
- left:10px;
- background-color:#F2EE79;
-}
-#rightframe {
- width: 14px;
- height: 150px;
- position:absolute;
- top:3px;
- right:10px;
- background-color:#F2EE79;
-}
-#topframe {
- width: 420px;
- height: 26px;
- position:absolute;
- top:0px;
- background-color:#F2EE79;
-}
-
-.sidepanel  {
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  height: 250px;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidepanel a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidepanel a:hover {
-  color: #f1f1f1;
-}
-
-.sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-}
-
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openbtn:hover {
-  background-color:#444;
-}
-</style>
 
 
    <script>
@@ -380,6 +433,8 @@ height: 30px;
 <body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 
 <script>
 $.fn.serializeObject = function()
@@ -399,16 +454,31 @@ o[this.name] = this.value || '';
 return o;
 };
 </script>
-<script>
-function authentication(){
-if ((document.getElementById("uname").value == "jeffchapman") && 
-   (document.getElementById("psw").value == "manitoba"))
-   document.getElementById("overlay").style.display = "none";
-   else {
-  alert("Please enter valid credentials.");
-}
 
-}
+<script>
+$(
+    function(){
+     
+        $('#starttimebtn').click(function(){
+									var starttime = moment().format('YYYY-MM-DDTHH:mm:ss');
+                  $('#starttime').val(starttime);  
+        });
+        
+    }
+);
+</script>
+
+<script>
+$(
+    function(){
+     
+        $('#stoptimebtn').click(function(){
+									var stoptime = moment().format('YYYY-MM-DDTHH:mm:ss');
+                  $('#stoptime').val(stoptime);  
+        });
+        
+    }
+);
 </script>
 
   </body>
@@ -442,8 +512,8 @@ function closeNav() {
 <center>
 <div id="info1">
   <td><br><br>
-   <button class="button" style="font-size:40px;"style="font-size:35px;" id="myBtn2" type="button" onclick="window.location.href = 'https://lt47.github.io/Advance-Crane/jobnum.htm';">Back</button><br><br>
-   <button class="button" style="font-size:40px;"style="font-size:35px;" id="retrieve" type="button" onclick="loadData();loadData1();loadData2();loadData3();loadData4();loadData5();">Click if auto-filled fields are incorrect</button><br><br>
+   <button class="button" style="font-size:40px;" id="myBtn2" type="button" onclick="window.location.href = 'https://lt47.github.io/Advance-Crane/jobnum.htm';">Back</button><br><br>
+   <button class="button" style="font-size:40px;" id="retrieve" type="button" onclick="loadData();loadData1();loadData2();loadData3();loadData4();loadData5();">Click if auto-filled fields are incorrect</button><br><br>
      
 <font size="8">Job Number:<br> <input class="buttontext" id="jobnumber" name="jobnumber" oninput="displayjobnum" type="text" style="font-size:35px" disabled/></font>
 </td><br><br>&nbsp;&nbsp;
@@ -451,21 +521,9 @@ function closeNav() {
     <td><font size="8">Equipment Asset #:<br> <input style="font-size:35px;" class="buttontext" id="equipmentassetnumber" name="equipmentassetnumber" type="text"/></font></td><br><br>
  <td><font size="8">Equipment Field Name:<br> <input style="font-size:35px;" class="buttontext" id="equipmentfieldname" name="equipmentfieldname" type="text"/></font></td><br><br>
   <td><font size="8">Job Type:<br> <input style="font-size:35px;" class="buttontext" id="jobtype" name="jobtype" type="text"/></font></td><br><br>
-  <td><font size="8">Scope of Work:<br> <textarea rows="20" cols="50" style="font-size:35px;"  id="scopeofwork" name="scopeofwork" type="text"/></textarea></font></td><br><br>
+  <td><font size="8">Scope of Work:<br> <textarea rows="10" cols="40" style="font-size:35px;"  id="scopeofwork" name="scopeofwork" type="text"/></textarea></font></td><br><br>
   </div><br><br>
   
-  <h2 style="font-size:40px;">
-  Crane Identification
-  </h2>  
-  <div id="info3">
-  <td><font size="8">Crane Manufacturer:<br> <input style="font-size:35px;" class="buttontext" id="cranemanufacturer" name="cranemanufacturer" type="text"/></font></td><br><br>
-  <td><font size="8">Crane Model:<br> <input style="font-size:35px;" class="buttontext" id="cranemodel" name="cranemodel" type="text"/></font></td><br><br>
-  <td><font size="8">Crane Serial Number:<br> <input style="font-size:35px;" class="buttontext" id="craneserialnumber" name="craneserialnumber" type="text"/></font></td><br><br>
-<br><br>
-  </div>
-  </center>
-<br><br><br><br><br>
-
 <center><h2><font size="8">Safety Set-up</font></h2>
 <h3><font size="7">Please check off your completed safety forms as required</font></h3>
 
@@ -483,12 +541,26 @@ function closeNav() {
 
 </center><br><br><br><br><br>
 
+ <h2 style="font-size:40px;">
+  Crane Identification
+  </h2>  
+  <div id="info3">
+  <td><font size="8">Crane Manufacturer:<br> <input style="font-size:35px;" class="buttontext" id="cranemanufacturer" name="cranemanufacturer" type="text"/></font></td><br><br>
+  <td><font size="8">Crane Model:<br> <input style="font-size:35px;" class="buttontext" id="cranemodel" name="cranemodel" type="text"/></font></td><br><br>
+  <td><font size="8">Crane Serial Number:<br> <input style="font-size:35px;" class="buttontext" id="craneserialnumber" name="craneserialnumber" type="text"/></font></td><br><br>
+<br><br>
+  </div>
+  </center>
+<br><br><br><br><br>
+
+
 <center>
-<label><font size="8">Start Time: <input style="font-size:35px;" type="time" name="starttime" id="starttime"></font></label><br><br><br>
+<label><font size="8">Start Time: <input style="font-size:35px;" type="datetime-local" name="starttime" id="starttime"></font></label>
+<button class="button" style="font-size:40px;" id="starttimebtn" type="button" >Now</button><br><br><br>
   
-  <label><font size="8">Description of work completed:<br> <textarea rows="20" cols="50" style="font-size:35px;" type="text" name="description-entry" id="description-entry"></textarea></font></label><br><br>
-  <label><font size="8">Parts:<br> <textarea rows="20" cols="50" style="font-size:35px;" type="text" name="parts-entry" id="parts-entry"></textarea></font></label><br><br>
-  <label><font size="8">Equipment:<br> <textarea rows="20" cols="50" style="font-size:35px;" type="text" name="equipment-entry" id="equipment-entry"></textarea></font></label>
+  <label><font size="8">Description of work completed:<br> <textarea rows="7" cols="40" style="font-size:35px;" type="text" name="description-entry" id="description-entry"></textarea></font></label><br><br>
+  <label><font size="8">Parts:<br> <textarea rows="10" cols="40" style="font-size:35px;" type="text" name="parts-entry" id="parts-entry"></textarea></font></label><br><br>
+  <label><font size="8">Equipment:<br> <textarea rows="10" cols="40" style="font-size:35px;" type="text" name="equipment-entry" id="equipment-entry"></textarea></font></label>
   <br><br><br>
      <label><font size="8"><input id="list" class=largerCheckbox type="checkbox" onclick="inspectionpoints();">Inspection Form</font></label><br></center>
  
@@ -496,7 +568,7 @@ function closeNav() {
  
  
 
- <table id="inspdiv" style="display:none">
+<table id="inspdiv" style="display:none">
   <tr>
     <td>Component</td>
   </tr>
@@ -527,7 +599,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "bridge-mechanicalcondition" name = "bridge-mechanicalcondition" >
+    <select style="height:45px;"  class="grayfield" id = "bridge-mechanicalcondition" name = "bridge-mechanicalcondition" onchange="nutest();" >
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -538,7 +610,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="bridge-mechanicaldescription" name="bridge-mechanicaldescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="bridge-mechanicaldescription" name="bridge-mechanicaldescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -549,7 +621,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "bridge-electricalpowercondition" name = "bridge-electricalpowercondition" >
+    <select style="height:45px;"  class="grayfield" id = "bridge-electricalpowercondition" name = "bridge-electricalpowercondition" onchange="nutest();" >
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -560,7 +632,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="bridge-electricpowerdescription" name="bridge-electricpowerdescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="bridge-electricpowerdescription" name="bridge-electricpowerdescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -571,7 +643,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "bridge-electricalcontrolscondition" name = "bridge-electricalcontrolscondition" >
+    <select style="height:45px;"  class="grayfield" id = "bridge-electricalcontrolscondition" name = "bridge-electricalcontrolscondition" onchange="nutest();">
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -582,7 +654,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="bridge-electricalcontrolsdescription" name="bridge-electricalcontrolsdescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="bridge-electricalcontrolsdescription" name="bridge-electricalcontrolsdescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -593,7 +665,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "bridge-structuralcondition" name = "bridge-structuralcondition" >
+    <select style="height:45px;"  class="grayfield" id = "bridge-structuralcondition" name = "bridge-structuralcondition" onchange="nutest();" >
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -604,15 +676,11 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="bridge-structuraldescription" name="bridge-structuraldescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="bridge-structuraldescription" name="bridge-structuraldescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
 
-<tr>
-<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="bridge-details" name="bridge-details">
-</textarea></font></td>
-</tr>
 
   <tr id="divider">
     <td></td>
@@ -625,8 +693,21 @@ function closeNav() {
   </tr>    
   <tr id="divider">
     <td></td>
-  </tr>    
- 
+  </tr>  
+   <tr>
+        <td><font size ="9">Number of Hoists (1-6):
+    <select style="height:45px;width:75px;font-size:35px;"  class="grayfield" id = "numberofhoists" name = "numberofhoists" onchange="numofhoists();" >
+    <option style="font-size:35px;" class="grayfield" selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+    <option style="font-size:35px;" value = "1">1</option>
+    <option style="font-size:35px;" value = "2">2</option>
+    <option style="font-size:35px;" value = "3">3</option>
+    <option style="font-size:35px;" value = "4">4</option>
+    <option style="font-size:35px;" value = "5">5</option>
+    <option style="font-size:35px;" value = "6">6</option>
+    </select></font></td>
+      </tr>
+
+<tbody id="hoist1" style="display:none;">
   <tr id="ROW1">
   <td><font size="10"><b>Hoist #1</b></font></td>
   </tr>
@@ -657,7 +738,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "firsthoist-trolleymechanicalcondition" name = "firsthoist-trolleymechanicalcondition" >
+    <select style="height:45px;"  class="grayfield" id = "firsthoist-trolleymechanicalcondition" name = "firsthoist-trolleymechanicalcondition" onchange="nutest();" >
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -668,7 +749,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-trolleymechanicaldescription" name="firsthoist-trolleymechanicaldescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="firsthoist-trolleymechanicaldescription" name="firsthoist-trolleymechanicaldescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -679,7 +760,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "firsthoist-hoistmechanicalcondition" name = "firsthoist-hoistmechanicalcondition" >
+    <select style="height:45px;"  class="grayfield" id = "firsthoist-hoistmechanicalcondition" name = "firsthoist-hoistmechanicalcondition" onchange="nutest();">
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -690,7 +771,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-hoistmechanicaldescription" name="firsthoist-hoistmechanicaldescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="firsthoist-hoistmechanicaldescription" name="firsthoist-hoistmechanicaldescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -701,7 +782,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "firsthoist-hoistmechanicalliftcondition" name = "firsthoist-hoistmechanicalliftcondition" >
+    <select style="height:45px;"  class="grayfield" id = "firsthoist-hoistmechanicalliftcondition" name = "firsthoist-hoistmechanicalliftcondition" onchange="nutest();">
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -712,7 +793,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-hoistmechanicalliftdescription" name="firsthoist-hoistmechanicalliftdescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="firsthoist-hoistmechanicalliftdescription" name="firsthoist-hoistmechanicalliftdescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -724,7 +805,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "firsthoist-electricalpowercondition" name = "firsthoist-electricalpowercondition" >
+    <select style="height:45px;"  class="grayfield" id = "firsthoist-electricalpowercondition" name = "firsthoist-electricalpowercondition" onchange="nutest();" >
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -735,7 +816,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-electricpowerdescription" name="firsthoist-electricpowerdescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="firsthoist-electricpowerdescription" name="firsthoist-electricpowerdescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -747,7 +828,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "firsthoist-electricalcontrolscondition" name = "firsthoist-electricalcontrolscondition" >
+    <select style="height:45px;"  class="grayfield" id = "firsthoist-electricalcontrolscondition" name = "firsthoist-electricalcontrolscondition" onchange="nutest();">
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -758,16 +839,12 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-electricalcontrolsdescription" name="firsthoist-electricalcontrolsdescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="firsthoist-electricalcontrolsdescription" name="firsthoist-electricalcontrolsdescription" onchange="nutest();">
 </textarea></font>
     </td>
-  </tr>
+    </tr></tbody>
   
-<tr>
-<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="firsthoist-details" name="firsthoist-details">
-</textarea></font></td>
-</tr>
-
+  <tbody id="hoist2" style="display:none;"> 
   <tr id="divider">
     <td></td>
   </tr>
@@ -811,7 +888,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "secondhoist-trolleymechanicalcondition" name = "secondhoist-trolleymechanicalcondition" >
+    <select style="height:45px;"  class="grayfield" id = "secondhoist-trolleymechanicalcondition" name = "secondhoist-trolleymechanicalcondition" onchange="nutest();" >
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -822,7 +899,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-trolleymechanicaldescription" name="secondhoist-trolleymechanicaldescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="secondhoist-trolleymechanicaldescription" name="secondhoist-trolleymechanicaldescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -833,7 +910,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "secondhoist-hoistmechanicalcondition" name = "secondhoist-hoistmechanicalcondition" >
+    <select style="height:45px;"  class="grayfield" id = "secondhoist-hoistmechanicalcondition" name = "secondhoist-hoistmechanicalcondition" onchange="nutest();">
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -844,7 +921,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-hoistmechanicaldescription" name="secondhoist-hoistmechanicaldescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="secondhoist-hoistmechanicaldescription" name="secondhoist-hoistmechanicaldescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -855,7 +932,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "secondhoist-hoistmechanicalliftcondition" name = "secondhoist-hoistmechanicalliftcondition" >
+    <select style="height:45px;"  class="grayfield" id = "secondhoist-hoistmechanicalliftcondition" name = "secondhoist-hoistmechanicalliftcondition" onchange="nutest();">
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -866,7 +943,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-hoistmechanicalliftdescription" name="secondhoist-hoistmechanicalliftdescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="secondhoist-hoistmechanicalliftdescription" name="secondhoist-hoistmechanicalliftdescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -878,7 +955,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "secondhoist-electricalpowercondition" name = "secondhoist-electricalpowercondition" >
+    <select style="height:45px;"  class="grayfield" id = "secondhoist-electricalpowercondition" name = "secondhoist-electricalpowercondition" onchange="nutest();" >
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -889,7 +966,7 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-electricpowerdescription" name="secondhoist-electricpowerdescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="secondhoist-electricpowerdescription" name="secondhoist-electricpowerdescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
@@ -901,7 +978,7 @@ function closeNav() {
     </tr>
     <tr>
         <td><font size ="8">Condition:
-    <select style="height:45px;"  class="grayfield" id = "secondhoist-electricalcontrolscondition" name = "secondhoist-electricalcontrolscondition" >
+    <select style="height:45px;"  class="grayfield" id = "secondhoist-electricalcontrolscondition" name = "secondhoist-electricalcontrolscondition" onchange="nutest();">
     <option style="font-size:35px;" class="grayfield" selected></option>
     <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
     <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
@@ -912,16 +989,634 @@ function closeNav() {
       <tr>
     <td>
       <font size ="8">Description:<br>
-    <textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-electricalcontrolsdescription" name="secondhoist-electricalcontrolsdescription">Inspected - No Defects Found
+    <textarea rows="5" cols="40" style="font-size:35px;" id="secondhoist-electricalcontrolsdescription" name="secondhoist-electricalcontrolsdescription" onchange="nutest();"></textarea></font>
+    </td>
+  </tr>
+  </tbody>
+  
+  <tbody id="hoist3" style="display:none;">
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+  </tr> 
+ 
+ <tr id="ROW1">
+  <td><font size="10"><b>Hoist #3</b></font></td>
+  </tr>
+   <tr>
+  <td style="color: black;">&nbsp;<font size="8"><input class="button" id="img2" type="file" accept="image/*" /></font><input id ="demo2" name="thirdhoist-imagelink" type="hidden"/></td>
+    <tr>
+  <tr>
+    <td><font size="7">Hoist Manufacturer:</font><input type="text" style="font-size:35px" name="thirdhoistmanufacturer" id="thirdhoistmanufacturer"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Model:</font><input type="text" style="font-size:35px" name="thirdhoistmodel" id="thirdhoistmodel"></td>
+  </tr>
+ <tr>
+    <td><font size="7">Hoist Capacity:</font><input type="text" style="font-size:35px" name="thirdhoistcapacity" id="thirdhoistcapacity"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Serial Number:</font><input type="text" style="font-size:35px" name="thirdhoistserialnum" id="thirdhoistserialnum"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Type:</font><input type="text" style="font-size:35px" name="thirdhoisttype" id="thirdhoisttype"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Number of Falls:</font><input type="text" style="font-size:35px" name="thirdhoistfalls" id="thirdhoistfalls"></td>
+  </tr>
+  <tr><td style="background-color:blue;color:white;"><font size="8">Trolley Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "thirdhoist-trolleymechanicalcondition" name = "thirdhoist-trolleymechanicalcondition" onchange="nutest();" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="thirdhoist-trolleymechanicaldescription" name="thirdhoist-trolleymechanicaldescription" onchange="nutest();">
 </textarea></font>
     </td>
   </tr>
-  
-<tr>
-<td class="peachfield"><font size ="8"> Details of Defects & Measurements<textarea rows="5" cols="50" style="font-size:35px;" id="secondhoist-details" name="secondhoist-details">
-</textarea></font></td>
-</tr>
+
+   <tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "thirdhoist-hoistmechanicalcondition" name = "thirdhoist-hoistmechanicalcondition" onchange="nutest();" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
       
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="thirdhoist-hoistmechanicaldescription" name="thirdhoist-hoistmechanicaldescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Lifting Device</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wire Rope/Chain, Hook Block, Hook & Safety Latch, Sheeves and Bearings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "thirdhoist-hoistmechanicalliftcondition" name = "thirdhoist-hoistmechanicalliftcondition" onchange="nutest();">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="thirdhoist-hoistmechanicalliftdescription" name="thirdhoist-hoistmechanicalliftdescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Power & Panels</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Safety Disconnect Switch, Buss Bars, Collectors, Festooning, Connections & Terminations</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "thirdhoist-electricalpowercondition" name = "thirdhoist-electricalpowercondition" onchange="nutest();">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="thirdhoist-electricpowerdescription" name="thirdhoist-electricpowerdescription" onchange="nutest();">
+</textarea></font>
+    </td>
+    </tr></tbody>
+  
+  <tbody id="hoist4" style="display:none;">
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+  </tr> 
+
+<tr id="ROW1">
+  <td><font size="10"><b>Hoist #4</b></font></td>
+  </tr>
+   <tr>
+  <td style="color: black;">&nbsp;<font size="8"><input class="button" id="img2" type="file" accept="image/*" /></font><input id ="demo2" name="fourthhoist-imagelink" type="hidden"/></td>
+    <tr>
+  <tr>
+    <td><font size="7">Hoist Manufacturer:</font><input type="text" style="font-size:35px" name="fourthhoistmanufacturer" id="fourthhoistmanufacturer"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Model:</font><input type="text" style="font-size:35px" name="fourthhoistmodel" id="fourthhoistmodel"></td>
+  </tr>
+ <tr>
+    <td><font size="7">Hoist Capacity:</font><input type="text" style="font-size:35px" name="fourthhoistcapacity" id="fourthhoistcapacity"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Serial Number:</font><input type="text" style="font-size:35px" name="fourthhoistserialnum" id="fourthhoistserialnum"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Type:</font><input type="text" style="font-size:35px" name="fourthhoisttype" id="fourthhoisttype"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Number of Falls:</font><input type="text" style="font-size:35px" name="fourthhoistfalls" id="fourthhoistfalls"></td>
+  </tr>
+  <tr><td style="background-color:blue;color:white;"><font size="8">Trolley Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fourthhoist-trolleymechanicalcondition" name = "fourthhoist-trolleymechanicalcondition" onchange="nutest();" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fourthhoist-trolleymechanicaldescription" name="fourthhoist-trolleymechanicaldescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+   <tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fourthhoist-hoistmechanicalcondition" name = "fourthhoist-hoistmechanicalcondition" onchange="nutest();" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fourthhoist-hoistmechanicaldescription" name="fourthhoist-hoistmechanicaldescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Lifting Device</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wire Rope/Chain, Hook Block, Hook & Safety Latch, Sheeves and Bearings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fourthhoist-hoistmechanicalliftcondition" name = "fourthhoist-hoistmechanicalliftcondition" onchange="nutest();">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fourthhoist-hoistmechanicalliftdescription" name="fourthhoist-hoistmechanicalliftdescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Power & Panels</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Safety Disconnect Switch, Buss Bars, Collectors, Festooning, Connections & Terminations</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fourthhoist-electricalpowercondition" name = "fourthhoist-electricalpowercondition" onchange="nutest();" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fourthhoist-electricpowerdescription" name="fourthhoist-electricpowerdescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Controls</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Ensure that the Pendant/Remote controls are smooth and Limit Switches work correctly. Match the fourthhoist Directional Markings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fourthhoist-electricalcontrolscondition" name = "fourthhoist-electricalcontrolscondition" onchange="nutest();">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fourthhoist-electricalcontrolsdescription" name="fourthhoist-electricalcontrolsdescription" onchange="nutest();"></textarea></font>
+    </td>
+  </tr>
+  
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Controls</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Ensure that the Pendant/Remote controls are smooth and Limit Switches work correctly. Match the thirdhoist Directional Markings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fourthhoist-electricalcontrolscondition" name = "fourthhoist-electricalcontrolscondition" onchange="nutest();" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fourthhoist-electricalcontrolsdescription" name="fourthhoist-electricalcontrolsdescription" onchange="nutest();"></textarea></font>
+    </td>
+    </tr></tbody>
+  
+  <tbody id="hoist5" style="display:none;">
+  <tr id="divider">
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+  </tr> 
+
+<tr id="ROW1">
+  <td><font size="10"><b>Hoist #5</b></font></td>
+  </tr>
+   <tr>
+  <td style="color: black;">&nbsp;<font size="8"><input class="button" id="img2" type="file" accept="image/*" /></font><input id ="demo2" name="fifthhoist-imagelink" type="hidden"/></td>
+    <tr>
+  <tr>
+    <td><font size="7">Hoist Manufacturer:</font><input type="text" style="font-size:35px" name="fifthhoistmanufacturer" id="fifthhoistmanufacturer"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Model:</font><input type="text" style="font-size:35px" name="fifthhoistmodel" id="fifthhoistmodel"></td>
+  </tr>
+ <tr>
+    <td><font size="7">Hoist Capacity:</font><input type="text" style="font-size:35px" name="fifthhoistcapacity" id="fifthhoistcapacity"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Serial Number:</font><input type="text" style="font-size:35px" name="fifthhoistserialnum" id="fifthhoistserialnum"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Type:</font><input type="text" style="font-size:35px" name="fifthhoisttype" id="fifthhoisttype"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Number of Falls:</font><input type="text" style="font-size:35px" name="fifthhoistfalls" id="fifthhoistfalls"></td>
+  </tr>
+  <tr><td style="background-color:blue;color:white;"><font size="8">Trolley Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fifthhoist-trolleymechanicalcondition" name = "fifthhoist-trolleymechanicalcondition" onchange="nutest();">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fifthhoist-trolleymechanicaldescription" name="fifthhoist-trolleymechanicaldescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+   <tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fifthhoist-hoistmechanicalcondition" name = "fifthhoist-hoistmechanicalcondition" onchange="nutest();">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fifthhoist-hoistmechanicaldescription" name="fifthhoist-hoistmechanicaldescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Lifting Device</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wire Rope/Chain, Hook Block, Hook & Safety Latch, Sheeves and Bearings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fifthhoist-hoistmechanicalliftcondition" name = "fifthhoist-hoistmechanicalliftcondition" onchange="nutest();">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fifthhoist-hoistmechanicalliftdescription" name="fifthhoist-hoistmechanicalliftdescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Power & Panels</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Safety Disconnect Switch, Buss Bars, Collectors, Festooning, Connections & Terminations</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fifthhoist-electricalpowercondition" name = "fifthhoist-electricalpowercondition" onchange="nutest();">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fifthhoist-electricpowerdescription" name="fifthhoist-electricpowerdescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Controls</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Ensure that the Pendant/Remote controls are smooth and Limit Switches work correctly. Match the fifthhoist Directional Markings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "fifthhoist-electricalcontrolscondition" name = "fifthhoist-electricalcontrolscondition" onchange="nutest();" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="fifthhoist-electricalcontrolsdescription" name="fifthhoist-electricalcontrolsdescription" onchange="nutest();"></textarea></font>
+    </td>
+    </tr></tbody>
+
+<tbody id="hoist6" style="display:none;">
+<tr id="divider">
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+  </tr> 
+
+<tr id="ROW1">
+  <td><font size="10"><b>Hoist #6</b></font></td>
+  </tr>
+   <tr>
+  <td style="color: black;">&nbsp;<font size="8"><input class="button" id="img2" type="file" accept="image/*" /></font><input id ="demo2" name="sixthhoist-imagelink" type="hidden"/></td>
+    <tr>
+  <tr>
+    <td><font size="7">Hoist Manufacturer:</font><input type="text" style="font-size:35px" name="sixthhoistmanufacturer" id="sixthhoistmanufacturer"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Model:</font><input type="text" style="font-size:35px" name="sixthhoistmodel" id="sixthhoistmodel"></td>
+  </tr>
+ <tr>
+    <td><font size="7">Hoist Capacity:</font><input type="text" style="font-size:35px" name="sixthhoistcapacity" id="sixthhoistcapacity"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Serial Number:</font><input type="text" style="font-size:35px" name="sixthhoistserialnum" id="sixthhoistserialnum"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Hoist Type:</font><input type="text" style="font-size:35px" name="sixthhoisttype" id="sixthhoisttype"></td>
+  </tr>
+  <tr>
+    <td><font size="7">Number of Falls:</font><input type="text" style="font-size:35px" name="sixthhoistfalls" id="sixthhoistfalls"></td>
+  </tr>
+  <tr><td style="background-color:blue;color:white;"><font size="8">Trolley Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "sixthhoist-trolleymechanicalcondition" name = "sixthhoist-trolleymechanicalcondition" onchange="nutest();" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="sixthhoist-trolleymechanicaldescription" name="sixthhoist-trolleymechanicaldescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+   <tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Drive Units</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wheels, Bearings, Brakes, Motors & Gearbox</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "sixthhoist-hoistmechanicalcondition" name = "sixthhoist-hoistmechanicalcondition" onchange="nutest();" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="sixthhoist-hoistmechanicaldescription" name="sixthhoist-hoistmechanicaldescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Hoist Mechanical - Lifting Device</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Wire Rope/Chain, Hook Block, Hook & Safety Latch, Sheeves and Bearings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "sixthhoist-hoistmechanicalliftcondition" name = "sixthhoist-hoistmechanicalliftcondition" onchange="nutest();">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="sixthhoist-hoistmechanicalliftdescription" name="sixthhoist-hoistmechanicalliftdescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Power & Panels</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Check the Safety Disconnect Switch, Buss Bars, Collectors, Festooning, Connections & Terminations</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "sixthhoist-electricalpowercondition" name = "sixthhoist-electricalpowercondition" onchange="nutest();" >
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="sixthhoist-electricpowerdescription" name="sixthhoist-electricpowerdescription" onchange="nutest();">
+</textarea></font>
+    </td>
+  </tr>
+
+
+<tr><td style="background-color:blue;color:white;"><font size="8">Electrical - Controls</font></td></tr>
+    <tr>
+      <td style="background-color:blue;color:white;"><font size="6">Ensure that the Pendant/Remote controls are smooth and Limit Switches work correctly. Match the sixthhoist Directional Markings</font></td>
+    </tr>
+    <tr>
+        <td><font size ="8">Condition:
+    <select style="height:45px;"  class="grayfield" id = "sixthhoist-electricalcontrolscondition" name = "sixthhoist-electricalcontrolscondition" onchange="nutest();">
+    <option style="font-size:35px;" class="grayfield" selected></option>
+    <option style="font-size:35px;" class ="greenfield" value = "OK">OK</option>
+    <option style="font-size:35px;" class ="yellowfield" value = "Marginal">Marginal</option>
+    <option style="font-size:35px;" class ="redfield" value = "Defective">Defective</option>
+    </select></font></td>
+      </tr>
+      
+      <tr>
+    <td>
+      <font size ="8">Description:<br>
+    <textarea rows="5" cols="40" style="font-size:35px;" id="sixthhoist-electricalcontrolsdescription" name="sixthhoist-electricalcontrolsdescription" onchange="nutest();"></textarea></font>
+    </td>
+    </tr></tbody>
+  
+
+ <tr id="divider">
+    <td></td>
+  </tr>
+  <tr>
+    <td>Safety Tear Down</td>
+  </tr>
+  <tr>
+    <td>Please check to indicate you have done the following before leaving the job site</td>
+  </tr>
+  <tr>
+    <td><input id="toolsrigging" class=largerCheckbox type="checkbox">All tools and rigging has been removed and accounted for.</td>
+  </tr>
+  <tr>
+    <td><input id="safetybarricades" class=largerCheckbox type="checkbox">All safety barricades, cones and marking tape has been removed and is accounted for.</td>
+  </tr>
+  <tr>
+    <td><input id="lockremoval" class=largerCheckbox type="checkbox">All locks have been removed.</td>
+  </tr>
+  <tr>
+    <td><input id="partsandmaterial" class=largerCheckbox type="checkbox">All material and parts have been removed and any required clean-up of the crane or lift is complete.</td>
+  </tr>
+  <tr>
+    <td><input id="clientcheck" class=largerCheckbox type="checkbox">The client has been informed that the job is complete and is satisfied.</td>
+  </tr>
+  
   <tr id="divider">
     <td></td>
   </tr>
@@ -952,32 +1647,8 @@ function closeNav() {
   </tr>
 <br><br><br>
 
- <tr id="divider">
-    <td></td>
-  </tr>
   <tr>
-    <td>Safety Tear Down</td>
-  </tr>
-  <tr>
-    <td>Please check to indicate you have done the following before leaving the job site</td>
-  </tr>
-  <tr>
-    <td><input id="toolsrigging" class=largerCheckbox type="checkbox">All tools and rigging has been removed and accounted for.</td>
-  </tr>
-  <tr>
-    <td><input id="safetybarricades" class=largerCheckbox type="checkbox">All safety barricades, cones and marking tape has been removed and is accounted for.</td>
-  </tr>
-  <tr>
-    <td><input id="lockremoval" class=largerCheckbox type="checkbox">All locks have been removed.</td>
-  </tr>
-  <tr>
-    <td><input id="partsandmaterial" class=largerCheckbox type="checkbox">All material and parts have been removed and any required clean-up of the crane or lift is complete.</td>
-  </tr>
-  <tr>
-    <td><input id="clientcheck" class=largerCheckbox type="checkbox">The client has been informed that the job is complete and is satisfied.</td>
-  </tr>
-  <tr>
-  <td>Stop Time: <input style="font-size:35px;" type="time" name="stoptime" id="stoptime"></td>
+  <td>Stop Time: <input style="font-size:35px;" type="datetime-local" name="stoptime" id="stoptime">&nbsp;<button class="button" style="font-size:40px;" id="stoptimebtn" type="button" >Now</button></td>
   </tr>
   <tr>
   <td style="background-color:yellow;"><font size="7">Job Hours</font></td>
@@ -991,11 +1662,16 @@ function closeNav() {
   <tr>
     <td><font size="6">Over Time:</font><input type="text" style="font-size:35px" name="overtime" id="overtime"></td>
   </tr>
+  <tr>
+    <input type="button" id="defsbtn" onclick="showdefs();" style="display:none;">
+  </tr>
   </table><br><br><br><br>
      
+
+
  
   
- <b><button class="submitbutton" id="submit-form" type="submit">Submit</button> </b></center> 
+ <b><button class="submitbutton" id="submit-form" type="submit" onclick="navtodefects();">Submit</button> </b></center> 
   <script>
 var fileInput = document.getElementById('img');
 //var preview = document.getElementById('preview');
@@ -1057,11 +1733,630 @@ $submit = $('#submit-form').on('click', function(e) {
   }).done(
     // do something
   );
-   $('#gsheetinsp')[0].reset();
+   //$('#gsheetinsp')[0].reset();
 })
 </script>
 
 </form>
+
+
+<div id="defectsandrepairs" style="display:none;">
+<center>
+<table>
+<tr id="ROW1">
+  <td><font size="10"><b>Bridge</b></font></td>
+  <td></td>
+</tr>
+<tr>
+  <td style="background-color:blue;"><font size="7">Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copybridge-mechanicalcondition" name="copybridge-mechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copybridge-mechanicaldescription" name="copybridge-mechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="bridge-mechanicalrepairs" name="bridge-mechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Power & Panels</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copybridge-electricalpowercondition" name="copybridge-electricalpowercondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copybridge-electricpowerdescription" name="copybridge-electricpowerdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="bridge-electricpowerrepairs" name="bridge-electricpowerrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Controls</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copybridge-electricalcontrolscondition" name="copybridge-electricalcontrolscondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copybridge-electricalcontrolsdescription" name="copybridge-electricalcontrolsdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="bridge-electricalcontrolsrepairs" name="bridge-electricalcontrolsrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Structural</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copybridge-structuralcondition" name="copybridge-structuralcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copybridge-structuraldescription" name="copybridge-structuraldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="bridge-structuralrepairs" name="bridge-structuralrepairs" font-size="35px"></textarea></td>
+</tr>
+
+ <tr>
+        <td><font size ="9">Number of Hoists (1-6):
+    <select style="height:45px;width:75px;font-size:35px;"  class="grayfield" id = "copynumberofhoists" name = "copynumberofhoists" onchange="copynumofhoists();" >
+    <option style="font-size:35px;" class="grayfield" selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+    <option style="font-size:35px;" value = "1">1</option>
+    <option style="font-size:35px;" value = "2">2</option>
+    <option style="font-size:35px;" value = "3">3</option>
+    <option style="font-size:35px;" value = "4">4</option>
+    <option style="font-size:35px;" value = "5">5</option>
+    <option style="font-size:35px;" value = "6">6</option>
+    </select></font></td>
+    <td></td> 
+ </tr>
+
+<tbody id="copyhoist1" style="display:none;">
+<tr id="divider">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+<tr id="ROW1">
+  <td><font size="10"><b>Hoist #1</b></font></td>
+  <td></td>
+</tr>
+<tr>
+  <td style="background-color:blue;"><font size="7">Trolley Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfirsthoist-trolleymechanicalcondition" name="copyfirsthoist-trolleymechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfirsthoist-trolleymechanicaldescription" name="copyfirsthoist-trolleymechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="firsthoist-trolleymechanicalrepairs" name="firsthoist-trolleymechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfirsthoist-hoistmechanicalcondition" name="copyfirsthoist-hoistmechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfirsthoist-hoistmechanicaldescription" name="copyfirsthoist-hoistmechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="firsthoist-hoistmechanicalrepairs" name="firsthoist-hoistmechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Lifting Device</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfirsthoist-hoistmechanicalliftcondition" name="copyfirsthoist-hoistmechanicalliftcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfirsthoist-hoistmechanicalliftdescription" name="copyfirsthoist-hoistmechanicalliftdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="firsthoist-hoistmechanicalliftrepairs" name="firsthoist-hoistmechanicalliftrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Power & Panels</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfirsthoist-electricalpowercondition" name="copyfirsthoist-electricalpowercondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfirsthoist-electricpowerdescription" name="copyfirsthoist-electricpowerdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="firsthoist-electricpowerrepairs" name="firsthoist-electricpowerrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Controls</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfirsthoist-electricalcontrolscondition" name="copyfirsthoist-electricalcontrolscondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfirsthoist-electricalcontrolsdescription" name="copyfirsthoist-electricalcontrolsdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="firsthoist-electricalcontrolsrepairs" name="firsthoist-electricalcontrolsrepairs" font-size="35px"></textarea></td>
+</tr>
+
+
+</tbody>
+
+
+<tbody id="copyhoist2" style="display:none;">
+<tr id="divider">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+<tr id="ROW1">
+  <td><font size="10"><b>Hoist #2</b></font></td>
+  <td></td>
+</tr>
+<tr>
+  <td style="background-color:blue;"><font size="7">Trolley Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copysecondhoist-trolleymechanicalcondition" name="copysecondhoist-trolleymechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copysecondhoist-trolleymechanicaldescription" name="copysecondhoist-trolleymechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="secondhoist-trolleymechanicalrepairs" name="secondhoist-trolleymechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copysecondhoist-hoistmechanicalcondition" name="copysecondhoist-hoistmechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copysecondhoist-hoistmechanicaldescription" name="copysecondhoist-hoistmechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="secondhoist-hoistmechanicalrepairs" name="secondhoist-hoistmechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Lifting Device</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copysecondhoist-hoistmechanicalliftcondition" name="copysecondhoist-hoistmechanicalliftcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copysecondhoist-hoistmechanicalliftdescription" name="copysecondhoist-hoistmechanicalliftdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="secondhoist-hoistmechanicalliftrepairs" name="secondhoist-hoistmechanicalliftrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Power & Panels</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copysecondhoist-electricalpowercondition" name="copysecondhoist-electricalpowercondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copysecondhoist-electricpowerdescription" name="copysecondhoist-electricpowerdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="secondhoist-electricpowerrepairs" name="secondhoist-electricpowerrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Controls</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copysecondhoist-electricalcontrolscondition" name="copysecondhoist-electricalcontrolscondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copysecondhoist-electricalcontrolsdescription" name="copysecondhoist-electricalcontrolsdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="secondhoist-electricalcontrolsrepairs" name="secondhoist-electricalcontrolsrepairs" font-size="35px"></textarea></td>
+</tr>
+
+
+</tbody>
+
+
+<tbody id="copyhoist3" style="display:none;">
+<tr id="divider">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+<tr id="ROW1">
+  <td><font size="10"><b>Hoist #3</b></font></td>
+  <td></td>
+</tr>
+<tr>
+  <td style="background-color:blue;"><font size="7">Trolley Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copythirdhoist-trolleymechanicalcondition" name="copythirdhoist-trolleymechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copythirdhoist-trolleymechanicaldescription" name="copythirdhoist-trolleymechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="thirdhoist-trolleymechanicalrepairs" name="thirdhoist-trolleymechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copythirdhoist-hoistmechanicalcondition" name="copythirdhoist-hoistmechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copythirdhoist-hoistmechanicaldescription" name="copythirdhoist-hoistmechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="thirdhoist-hoistmechanicalrepairs" name="thirdhoist-hoistmechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Lifting Device</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copythirdhoist-hoistmechanicalliftcondition" name="copythirdhoist-hoistmechanicalliftcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copythirdhoist-hoistmechanicalliftdescription" name="copythirdhoist-hoistmechanicalliftdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="thirdhoist-hoistmechanicalliftrepairs" name="thirdhoist-hoistmechanicalliftrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Power & Panels</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copythirdhoist-electricalpowercondition" name="copythirdhoist-electricalpowercondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copythirdhoist-electricpowerdescription" name="copythirdhoist-electricpowerdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="thirdhoist-electricpowerrepairs" name="thirdhoist-electricpowerrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Controls</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copythirdhoist-electricalcontrolscondition" name="copythirdhoist-electricalcontrolscondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copythirdhoist-electricalcontrolsdescription" name="copythirdhoist-electricalcontrolsdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="thirdhoist-electricalcontrolsrepairs" name="thirdhoist-electricalcontrolsrepairs" font-size="35px"></textarea></td>
+</tr>
+
+</tbody>
+
+
+<tbody id="copyhoist4" style="display:none;">
+<tr id="divider">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+<tr id="ROW1">
+  <td><font size="10"><b>Hoist #4</b></font></td>
+  <td></td>
+</tr>
+<tr>
+  <td style="background-color:blue;"><font size="7">Trolley Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfourthhoist-trolleymechanicalcondition" name="copyfourthhoist-trolleymechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfourthhoist-trolleymechanicaldescription" name="copyfourthhoist-trolleymechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="fourthhoist-trolleymechanicalrepairs" name="fourthhoist-trolleymechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfourthhoist-hoistmechanicalcondition" name="copyfourthhoist-hoistmechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfourthhoist-hoistmechanicaldescription" name="copyfourthhoist-hoistmechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="fourthhoist-hoistmechanicalrepairs" name="fourthhoist-hoistmechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Lifting Device</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfourthhoist-hoistmechanicalliftcondition" name="copyfourthhoist-hoistmechanicalliftcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfourthhoist-hoistmechanicalliftdescription" name="copyfourthhoist-hoistmechanicalliftdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="fourthhoist-hoistmechanicalliftrepairs" name="fourthhoist-hoistmechanicalliftrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Power & Panels</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfourthhoist-electricalpowercondition" name="copyfourthhoist-electricalpowercondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfourthhoist-electricpowerdescription" name="copyfourthhoist-electricpowerdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="fourthhoist-electricpowerrepairs" name="fourthhoist-electricpowerrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Controls</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfourthhoist-electricalcontrolscondition" name="copyfourthhoist-electricalcontrolscondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfourthhoist-electricalcontrolsdescription" name="copyfourthhoist-electricalcontrolsdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="fourthhoist-electricalcontrolsrepairs" name="fourthhoist-electricalcontrolsrepairs" font-size="35px"></textarea></td>
+</tr>
+
+</tbody>
+
+
+<tbody id="copyhoist5" style="display:none;">
+<tr id="divider">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+<tr id="ROW1">
+  <td><font size="10"><b>Hoist #5</b></font></td>
+  <td></td>
+</tr>
+<tr>
+  <td style="background-color:blue;"><font size="7">Trolley Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfifthhoist-trolleymechanicalcondition" name="copyfifthhoist-trolleymechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfifthhoist-trolleymechanicaldescription" name="copyfifthhoist-trolleymechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="fifthhoist-trolleymechanicalrepairs" name="fifthhoist-trolleymechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfifthhoist-hoistmechanicalcondition" name="copyfifthhoist-hoistmechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfifthhoist-hoistmechanicaldescription" name="copyfifthhoist-hoistmechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="fifthhoist-hoistmechanicalrepairs" name="fifthhoist-hoistmechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Lifting Device</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfifthhoist-hoistmechanicalliftcondition" name="copyfifthhoist-hoistmechanicalliftcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfifthhoist-hoistmechanicalliftdescription" name="copyfifthhoist-hoistmechanicalliftdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="fifthhoist-hoistmechanicalliftrepairs" name="fifthhoist-hoistmechanicalliftrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Power & Panels</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfifthhoist-electricalpowercondition" name="copyfifthhoist-electricalpowercondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfifthhoist-electricpowerdescription" name="copyfifthhoist-electricpowerdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="fifthhoist-electricpowerrepairs" name="fifthhoist-electricpowerrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Controls</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copyfifthhoist-electricalcontrolscondition" name="copyfifthhoist-electricalcontrolscondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copyfifthhoist-electricalcontrolsdescription" name="copyfifthhoist-electricalcontrolsdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="fifthhoist-electricalcontrolsrepairs" name="fifthhoist-electricalcontrolsrepairs" font-size="35px"></textarea></td>
+</tr>
+
+</tbody>
+
+
+<tbody id="copyhoist6" style="display:none;">
+<tr id="divider">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+  <tr id="divider">
+    <td></td>
+    <td></td>
+  </tr> 
+<tr id="ROW1">
+  <td><font size="10"><b>Hoist #6</b></font></td>
+  <td></td>
+</tr>
+<tr>
+  <td style="background-color:blue;"><font size="7">Trolley Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copysixthhoist-trolleymechanicalcondition" name="copysixthhoist-trolleymechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copysixthhoist-trolleymechanicaldescription" name="copysixthhoist-trolleymechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="sixthhoist-trolleymechanicalrepairs" name="sixthhoist-trolleymechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Drive Units</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copysixthhoist-hoistmechanicalcondition" name="copysixthhoist-hoistmechanicalcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copysixthhoist-hoistmechanicaldescription" name="copysixthhoist-hoistmechanicaldescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="sixthhoist-hoistmechanicalrepairs" name="sixthhoist-hoistmechanicalrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Hoist Mechanical - Lifting Device</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copysixthhoist-hoistmechanicalliftcondition" name="copysixthhoist-hoistmechanicalliftcondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copysixthhoist-hoistmechanicalliftdescription" name="copysixthhoist-hoistmechanicalliftdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="sixthhoist-hoistmechanicalliftrepairs" name="sixthhoist-hoistmechanicalliftrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Power & Panels</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copysixthhoist-electricalpowercondition" name="copysixthhoist-electricalpowercondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copysixthhoist-electricpowerdescription" name="copysixthhoist-electricpowerdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="sixthhoist-electricpowerrepairs" name="sixthhoist-electricpowerrepairs" font-size="35px"></textarea></td>
+</tr>
+
+<tr>
+  <td style="background-color:blue;"><font size="7">Electrical - Controls</font></td>
+  <td style="background-color:blue;"><font size="7">Suggested Repairs</font></td>
+</tr>
+<tr>
+  <td><label>Condition:&nbsp;&nbsp;</label><input style="font-size:30px;" type="text" id="copysixthhoist-electricalcontrolscondition" name="copysixthhoist-electricalcontrolscondition" disabled></td>
+  <td></td>
+</tr>
+<tr>
+  <td><textarea rows="5" cols="40" id="copysixthhoist-electricalcontrolsdescription" name="copysixthhoist-electricalcontrolsdescription" font-size="35px"></textarea></td>
+  <td><textarea rows="5" cols="40" id="sixthhoist-electricalcontrolsrepairs" name="sixthhoist-electricalcontrolsrepairs" font-size="35px"></textarea></td>
+</tr>
+
+
+</tbody>
+
+
+</table>
+
+<button class="submitbutton" id="submit-repairs" type="submit">Submit</button>
+</center>
+</div>
+ 
+
    <script>
 function inspectionpoints(){
 var list = document.getElementById("list");
@@ -1166,4 +2461,3 @@ function backjobnum(){
 </script>
 
 </html>
-
